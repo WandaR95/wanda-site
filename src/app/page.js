@@ -7,13 +7,13 @@ export default function Home() {
     {
       title: "The First to Make It This Far — Paperback",
       format: "Paperback",
-      image: "/books/first-to-make-it.png",
+      image: "/books/first-to-make-it.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
     },
     {
       title: "Why You're Creatively Blocked — Paperback",
       format: "Paperback",
-      image: "/books/creatively-blocked.png",
+      image: "/books/creatively-blocked.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/paperback/product-kvddgn4.html?page=1&pageSize=4",
     },
 
@@ -21,13 +21,13 @@ export default function Home() {
     {
       title: "The First to Make It This Far — eBook",
       format: "eBook",
-      image: "/books/first-to-make-it.png",
+      image: "/books/first-to-make-it.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/ebook/product-je6eed5.html?page=1&pageSize=4",
     },
     {
       title: "Why You're Creatively Blocked — eBook",
       format: "eBook",
-      image: "/books/creatively-blocked.png",
+      image: "/books/creatively-blocked.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/ebook/product-578yy4r.html?page=1&pageSize=4",
     },
     {
