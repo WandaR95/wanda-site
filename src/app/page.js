@@ -3,62 +3,69 @@ export default function Home() {
   const calendlyLink = "https://calendly.com/wanda-rogers/30min"
 
   const products = [
-    // Paperbacks (2)
-    {
-      title: "The First to Make It This Far — Paperback",
-      format: "Paperback",
-      image: "/books/first-to-make-it.jpg",
-      link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
-    },
     {
       title: "Why You're Creatively Blocked — Paperback",
       format: "Paperback",
       image: "/books/creatively-blocked.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/paperback/product-kvddgn4.html?page=1&pageSize=4",
+      featured: true,
+      description: "A bold, science-backed guide for creatives ready to stop fighting themselves and start creating with clarity.",
     },
-
-    // eBooks (8)
+    {
+      title: "The First to Make It This Far — Paperback",
+      format: "Paperback",
+      image: "/books/first-to-make-it.jpg",
+      link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
+      featured: true,
+      description: "A memoir of resilience, rhythm, and renewal for anyone who has survived more than they speak about.",
+    },
     {
       title: "The First to Make It This Far — eBook",
       format: "eBook",
-      image: "/books/first-to-make-it.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/ebook/product-je6eed5.html?page=1&pageSize=4",
+      description: "Digital edition.",
     },
     {
       title: "Why You're Creatively Blocked — eBook",
       format: "eBook",
-      image: "/books/creatively-blocked.jpg",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/ebook/product-578yy4r.html?page=1&pageSize=4",
+      description: "Digital edition.",
     },
     {
       title: "Perfectionist Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-perfectionist-workbook/ebook/product-zmrjwj6.html?page=1&pageSize=4",
+      description: "For creatives stuck waiting until it feels perfect.",
     },
     {
       title: "Idea Hopper Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-idea-hopper-workbook/ebook/product-2mr7e7m.html?page=1&pageSize=4",
+      description: "For creatives drowning in too many ideas.",
     },
     {
       title: "Overthinker Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-overthinker-workbook/ebook/product-m2zr56j.html?page=1&pageSize=4",
+      description: "For creatives trapped in analysis.",
     },
     {
       title: "Distracted Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-distracted-workbook/ebook/product-659ej9m.html?page=1&pageSize=4",
+      description: "For creatives who struggle to stay locked in.",
     },
     {
       title: "Burnout Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-burnout-workbook/ebook/product-84y8j47.html?page=1&pageSize=4",
+      description: "For creatives who need restoration, not more pressure.",
     },
     {
       title: "Comprehensive Companion Workbook — eBook",
       format: "eBook",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked-comprehensive-companion-workbook/ebook/product-7k8n854.html?page=1&pageSize=4",
+      description: "The full support toolkit for staying unblocked.",
     },
   ]
 
@@ -189,54 +196,92 @@ export default function Home() {
       {/* SHOP */}
       <section id="shop" className="bg-neutral-950 py-24 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <h2 className="text-4xl font-semibold">Shop</h2>
-              <p className="text-white/60 mt-3 max-w-2xl">
-                Digital and paperback resources for creatives who want freedom, structure, and self-trust.
-                Fulfilled via Lulu.
-              </p>
-            </div>
-            <div className="text-white/50 text-sm">
-              2 Paperbacks • 8 eBooks
-            </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-semibold">Books & Workbooks</h2>
+            <p className="text-white/60 mt-4 leading-relaxed">
+              Resources for creatives who want more clarity, more courage, and more consistency.
+            </p>
           </div>
 
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p) => (
-              <a
-                key={p.title}
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-white/5 border border-white/10 p-8 rounded-3xl hover:border-white/25 transition"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs tracking-widest uppercase text-white/60">
-                    {p.format}
-                  </span>
-                  <span className="text-white/40 group-hover:text-white/70 transition">
-                    View →
-                  </span>
-                </div>
-{p.image && (
-  <img
-    src={p.image}
-    alt={p.title}
-    className="w-full rounded-xl mb-6"
-  />
-)}
-                <h3 className="mt-6 text-xl font-semibold leading-snug">
-                  {p.title}
-                </h3>
-                <p className="mt-3 text-white/60 leading-relaxed">
-                  Designed to move you from stuck → clear → consistent.
-                </p>
-                <div className="mt-8 inline-flex rounded-2xl bg-white text-black px-5 py-2 text-sm font-medium group-hover:opacity-90">
-                  Buy on Lulu
-                </div>
-              </a>
-            ))}
+          <div className="mt-14 grid md:grid-cols-2 gap-10">
+            {products
+              .filter((p) => p.featured)
+              .map((p) => (
+                <a
+                  key={p.title}
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group bg-white/5 border border-white/10 rounded-[2rem] p-8 hover:border-white/30 transition"
+                >
+                  {p.image && (
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="w-full rounded-2xl mb-8 shadow-2xl transition duration-300 group-hover:scale-[1.02]"
+                    />
+                  )}
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs tracking-widest uppercase text-white/60">
+                      {p.format}
+                    </span>
+                    <span className="text-white/40 group-hover:text-white/70 transition">
+                      View →
+                    </span>
+                  </div>
+
+                  <h3 className="mt-5 text-2xl font-semibold leading-snug">
+                    {p.title}
+                  </h3>
+
+                  <p className="mt-4 text-white/60 leading-relaxed">
+                    {p.description}
+                  </p>
+
+                  <div className="mt-8 inline-flex rounded-2xl bg-white text-black px-5 py-3 text-sm font-medium">
+                    Buy on Lulu
+                  </div>
+                </a>
+              ))}
+          </div>
+
+          <div className="mt-20">
+            <h3 className="text-2xl font-semibold text-center">Digital Library</h3>
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {products
+                .filter((p) => !p.featured)
+                .map((p) => (
+                  <a
+                    key={p.title}
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group bg-white/5 border border-white/10 p-6 rounded-3xl hover:border-white/25 transition"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs tracking-widest uppercase text-white/60">
+                        {p.format}
+                      </span>
+                      <span className="text-white/40 group-hover:text-white/70 transition">
+                        View →
+                      </span>
+                    </div>
+
+                    <h4 className="mt-5 text-lg font-semibold leading-snug">
+                      {p.title}
+                    </h4>
+
+                    <p className="mt-3 text-white/60 leading-relaxed text-sm">
+                      {p.description}
+                    </p>
+
+                    <div className="mt-6 inline-flex rounded-2xl bg-white text-black px-4 py-2 text-sm font-medium">
+                      Buy on Lulu
+                    </div>
+                  </a>
+                ))}
+            </div>
           </div>
         </div>
       </section>
