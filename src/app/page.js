@@ -136,6 +136,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section className="py-24 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <p className="text-white/50 tracking-widest text-xs uppercase">
+              About Wanda Rogers
+            </p>
+
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+              I help creatives stop fighting themselves and start building from truth.
+            </h2>
+          </div>
+
+          <div className="text-white/70 leading-relaxed space-y-6 text-lg">
+            <p>
+              I’m Wanda Rogers — creativity coach, author, artist, and founder of
+              Mellow Mastermind.
+            </p>
+
+            <p>
+              My work is for ambitious creatives who know they have something real
+              to offer, but keep running into invisible resistance: overthinking,
+              burnout, perfectionism, inconsistency, and fear disguised as “not ready yet.”
+            </p>
+
+            <p>
+              I blend creative psychology, nervous system awareness, identity work,
+              and practical execution so your creativity can feel safer, clearer,
+              and more sustainable.
+            </p>
+
+            <p>
+              This is not about hustling harder. It’s about creating from a place of
+              self-trust, alignment, and freedom.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* TRUST */}
       <section className="bg-neutral-950 py-20 px-6 border-y border-white/10">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-left">
