@@ -361,9 +361,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="px-6 py-14 border-t border-white/10 text-center text-white/50 text-sm">
-        Wanda Rogers © {new Date().getFullYear()} • Creativity • Freedom • Trust
+            {/* FOOTER */}
+      <footer className="border-t border-white/10 mt-24 py-16 px-6 bg-black">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-sm text-white/60">
+
+          <div>
+            <h3 className="text-white font-semibold mb-3">
+              Wanda Rogers
+            </h3>
+            <p>
+              Creativity coach, author, and founder of Mellow Mastermind.
+            </p>
+            <p className="mt-3">
+              Helping creatives move from resistance to expression.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">
+              Explore
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#method" className="hover:text-white">
+                  The Method
+                </a>
+              </li>
+              <li>
+                <a href="#shop" className="hover:text-white">
+                  Books & Workbooks
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://calendly.com/wanda-rogers/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white"
+                >
+                  Book a Call
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3">
+              Connect
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="mailto:hello@wandarogers.com" className="hover:text-white">
+                  hello@wandarogers.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="max-w-6xl mx-auto mt-12 pt-6 border-t border-white/10 text-xs text-white/40">
+          © {new Date().getFullYear()} Wanda Rogers. All rights reserved.
+        </div>
       </footer>
     </main>
   )
