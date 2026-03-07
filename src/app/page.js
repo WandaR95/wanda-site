@@ -71,6 +71,49 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white">
+      {/* NAVIGATION */}
+<header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
+  <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div className="text-white font-semibold tracking-wide">
+      Wanda Rogers
+    </div>
+
+    <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
+
+      <a href="#about" className="hover:text-white transition">
+        About
+      </a>
+
+      <a href="#music" className="hover:text-white transition">
+        Music
+      </a>
+
+      <a href="#shop" className="hover:text-white transition">
+        Books
+      </a>
+
+      <a href="#tools" className="hover:text-white transition">
+        Free Tools
+      </a>
+
+      <a href="#work" className="hover:text-white transition">
+        Coaching
+      </a>
+
+      <a
+        href="https://calendly.com/wanda-rogers/30min"
+        target="_blank"
+        rel="noreferrer"
+        className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium"
+      >
+        Book Call
+      </a>
+
+    </nav>
+
+  </div>
+</header> 
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur border-b border-white/10 bg-black/60">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -162,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="py-24 px-6 border-t border-white/10">
+      <section id="about" className="py-24 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
             <p className="text-white/50 tracking-widest text-xs uppercase">
@@ -261,6 +304,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+{/* MUSIC */}
+<section id="music" className="py-24 px-6 border-t border-white/10">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <p className="text-white/50 tracking-widest text-xs uppercase">
+        Music
+      </p>
+
+      <h2 className="mt-4 text-4xl font-semibold">
+        Creativity was music before it was anything else.
+      </h2>
+
+      <p className="mt-6 text-white/70 leading-relaxed">
+        Music has always been my first language of creativity.
+        Through sound and storytelling I explore identity,
+        emotion, and imagination.
+      </p>
+
+      <p className="mt-6 text-white/60 leading-relaxed">
+        Today my music lives alongside my writing and coaching
+        as another way of translating truth.
+      </p>
+
+      <div className="mt-8">
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-white text-black px-6 py-3 rounded-xl text-sm font-medium"
+        >
+          Listen to My Music
+        </a>
+      </div>
+    </div>
+
+    <div className="aspect-video bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-white/40">
+      Music Video / Player
+    </div>
+
+  </div>
+</section>
 
       {/* TRUST */}
       <section className="bg-neutral-950 py-20 px-6 border-y border-white/10">
@@ -411,6 +497,57 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FREE TOOLS */}
+<section id="tools" className="py-24 px-6 border-t border-white/10 bg-neutral-950">
+  <div className="max-w-6xl mx-auto text-center">
+
+    <p className="text-white/50 tracking-widest text-xs uppercase">
+      Free Tools
+    </p>
+
+    <h2 className="mt-4 text-4xl font-semibold">
+      Tools for unblocking your creativity
+    </h2>
+
+    <p className="mt-6 text-white/70 max-w-2xl mx-auto">
+      These resources are designed to help creatives reset their mind,
+      capture ideas, and build momentum again.
+    </p>
+
+    <div className="mt-12 grid md:grid-cols-3 gap-6">
+
+      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+        <h3 className="text-xl font-semibold">
+          Creative Block Reset
+        </h3>
+        <p className="mt-4 text-white/60 text-sm">
+          A short guide to help you reconnect with your creative flow.
+        </p>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+        <h3 className="text-xl font-semibold">
+          Idea Capture Sheet
+        </h3>
+        <p className="mt-4 text-white/60 text-sm">
+          A simple framework for collecting and organizing creative ideas.
+        </p>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+        <h3 className="text-xl font-semibold">
+          Creative Prompts
+        </h3>
+        <p className="mt-4 text-white/60 text-sm">
+          Writing and reflection prompts to spark new ideas.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* COACHING */}
       <section id="work" className="py-24 px-6 max-w-6xl mx-auto">
