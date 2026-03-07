@@ -175,6 +175,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CREDIBILITY */}
+      <section className="py-24 px-6 bg-neutral-950 border-t border-white/10 border-b border-white/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-white/50 tracking-widest text-xs uppercase">
+              Why This Work Lands Differently
+            </p>
+
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+              This is not surface-level motivation.
+            </h2>
+
+            <p className="mt-6 text-white/70 text-lg leading-relaxed">
+              My work sits at the intersection of creativity, nervous system awareness,
+              identity, and execution. I help creatives understand why they feel blocked,
+              rebuild trust with themselves, and move forward with strategy instead of shame.
+            </p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-8">
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+              <p className="text-white/50 text-xs tracking-widest uppercase">
+                Psychology
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold">
+                Rooted in deeper truth
+              </h3>
+              <p className="mt-4 text-white/65 leading-relaxed">
+                We don’t just treat symptoms like procrastination or inconsistency.
+                We look at what your mind and body are trying to protect you from.
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+              <p className="text-white/50 text-xs tracking-widest uppercase">
+                Identity
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold">
+                Built for real transformation
+              </h3>
+              <p className="mt-4 text-white/65 leading-relaxed">
+                Sustainable output comes from identity alignment. When your self-concept
+                changes, your actions stop feeling forced.
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+              <p className="text-white/50 text-xs tracking-widest uppercase">
+                Strategy
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold">
+                Practical, not performative
+              </h3>
+              <p className="mt-4 text-white/65 leading-relaxed">
+                This work turns insight into execution. You leave with language,
+                structure, and a way forward that actually fits your life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TRUST */}
       <section className="bg-neutral-950 py-20 px-6 border-y border-white/10">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-left">
