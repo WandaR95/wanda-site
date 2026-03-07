@@ -136,6 +136,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* IDENTITY BRIDGE */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-5xl mx-auto text-center">
+
+          <p className="text-white/50 tracking-widest text-xs uppercase">
+            Wanda Rogers
+          </p>
+
+          <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+            Artist. Author. Creativity Coach.
+          </h2>
+
+          <p className="mt-6 text-white/70 text-lg leading-relaxed">
+            I create music, write books, build tools for creatives, and help people
+            move through the invisible blocks that keep their ideas buried.
+          </p>
+
+          <p className="mt-6 text-white/60 leading-relaxed">
+            Through my framework <strong>Mellow Mastermind</strong>, I guide creatives
+            toward clarity, self-trust, and sustainable expression.
+          </p>
+
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section className="py-24 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
@@ -423,7 +448,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* FOOTER */}
+      {/* FOOTER */}
       <footer className="border-t border-white/10 mt-24 py-16 px-6 bg-black">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-sm text-white/60">
 
