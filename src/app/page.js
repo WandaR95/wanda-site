@@ -7,11 +7,13 @@ export default function Home() {
     {
       title: "The First to Make It This Far — Paperback",
       format: "Paperback",
+      image: "/books/first-to-make-it.png",
       link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
     },
     {
       title: "Why You're Creatively Blocked — Paperback",
       format: "Paperback",
+      image: "/books/creatively-blocked.png",
       link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/paperback/product-kvddgn4.html?page=1&pageSize=4",
     },
 
@@ -215,6 +217,11 @@ export default function Home() {
                     View →
                   </span>
                 </div>
+                <img
+src={p.image}
+alt={p.title}
+className="w-full rounded-xl mb-6"
+/>
                 <h3 className="mt-6 text-xl font-semibold leading-snug">
                   {p.title}
                 </h3>
