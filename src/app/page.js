@@ -139,44 +139,53 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-24 md:py-28 text-center">
-        <p className="text-white/70 tracking-widest text-xs uppercase">
-          Expert Creativity Coach • Identity • Nervous System • Execution
-        </p>
+            {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 py-24 md:py-28 grid md:grid-cols-2 gap-14 items-center">
 
-        <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-          Creativity Was Never Your Problem.
-          <br />
-          Safety Was.
-        </h1>
+        <div>
+          <p className="text-white/50 tracking-widest text-xs uppercase">
+            Wanda Rogers
+          </p>
 
-        <p className="text-xl text-white/70 mt-8 max-w-3xl mx-auto leading-relaxed">
-          I help ambitious creatives regulate their nervous system, reclaim their voice,
-          and build authority that feels like freedom — not performance.
-        </p>
+          <h1 className="mt-4 text-5xl md:text-6xl font-semibold leading-tight">
+            Artist. Author. Creativity Coach.
+          </h1>
 
-        <div className="mt-12 flex justify-center gap-4 flex-wrap">
-          <a
-            href={calendlyLink}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-white text-black px-8 py-4 rounded-2xl text-lg font-medium hover:opacity-90"
-          >
-            Apply / Book a Call
-          </a>
+          <p className="mt-6 text-white/70 text-lg leading-relaxed">
+            I help creatives move through the invisible blocks that keep their ideas buried,
+            so they can create with more clarity, self-trust, and freedom.
+          </p>
 
-          <a
-            href="#shop"
-            className="border border-white/30 hover:border-white px-8 py-4 rounded-2xl text-lg text-white/90"
-          >
-            Explore the Shop
-          </a>
+          <p className="mt-6 text-white/60 leading-relaxed">
+            Through books, music, tools, and the <strong>Mellow Mastermind</strong> framework,
+            I’m building a space where creativity can feel both powerful and safe.
+          </p>
+
+          <div className="mt-10 flex gap-4 flex-wrap">
+            <a
+              href="#work"
+              className="bg-white text-black px-6 py-3 rounded-xl text-sm font-medium"
+            >
+              Work With Me
+            </a>
+
+            <a
+              href="#music"
+              className="border border-white/20 px-6 py-3 rounded-xl text-sm text-white/80 hover:text-white"
+            >
+              Listen to Music
+            </a>
+          </div>
         </div>
 
-        <div className="mt-12 text-white/50 text-sm">
-          A luxury approach to creativity: calm, clear, consistent.
+        <div className="relative">
+          <img
+            src="/wanda-hero.jpg"
+            alt="Wanda Rogers"
+            className="rounded-3xl w-full shadow-2xl object-cover"
+          />
         </div>
+
       </section>
 
       {/* IDENTITY BRIDGE */}
