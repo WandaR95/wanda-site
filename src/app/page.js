@@ -2,9 +2,26 @@
 
 import { useRef, useState } from "react"
 
+const featuredTracks = [
+  {
+    title: "Mars",
+    src: "/music/some-experience-necessary/mars.mp3",
+  },
+  {
+    title: "Broken Mirrors",
+    src: "/music/im-not-a-rapper/broken-mirrors.mp3",
+  },
+  {
+    title: "Built For This",
+    src: "/music/im-not-a-rapper/built-for-this.mp3",
+  },
+]
+
 export default function Home() {
 
-    const audioRef = useRef(null)
+
+
+  const audioRef = useRef(null)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -143,20 +160,7 @@ export default function Home() {
     },
   ]
 
-  const featuredTracks = [
-  {
-    title: "Mars",
-    src: "/music/some-experience-necessary/mars.mp3",
-  },
-  {
-    title: "Broken Mirrors",
-    src: "/music/im-not-a-rapper/broken-mirrors.mp3",
-  },
-  {
-    title: "Built For This",
-    src: "/music/im-not-a-rapper/built-for-this.mp3",
-  },
-]
+
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -203,30 +207,7 @@ export default function Home() {
 
         </div>
       </header>
-      {/* NAV */}
-      <header className="sticky top-0 z-50 backdrop-blur border-b border-white/10 bg-black/60">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="font-semibold tracking-wide">
-            Wanda Rogers <span className="text-white/50">•</span>{" "}
-            <span className="text-white/70">Mellow Mastermind</span>
-          </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
-            <a className="hover:text-white" href="#method">Method</a>
-            <a className="hover:text-white" href="#shop">Shop</a>
-            <a className="hover:text-white" href="#work">Coaching</a>
-          </nav>
-
-          <a
-            href={calendlyLink}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:opacity-90"
-          >
-            Book on Calendly
-          </a>
-        </div>
-      </header>
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-24 md:py-28 grid md:grid-cols-2 gap-14 items-center">
@@ -424,27 +405,27 @@ export default function Home() {
 
 
           <div className="mt-16 space-y-4">
-  {featuredTracks.map((track, index) => (
-    <button
-      key={track.title}
-      onClick={() => playTrack(index)}
-      className="w-full text-left bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/25 transition"
-    >
-      <div className="flex items-center justify-between gap-4">
-        <div>
-          <p className="text-white font-medium">{track.title}</p>
-          <p className="text-white/50 text-sm mt-1">
-            Click to play in the floating player
-          </p>
-        </div>
+            {featuredTracks.map((track, index) => (
+              <button
+                key={track.title}
+                onClick={() => playTrack(index)}
+                className="w-full text-left bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/25 transition"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-white font-medium">{track.title}</p>
+                    <p className="text-white/50 text-sm mt-1">
+                      Click to play in the floating player
+                    </p>
+                  </div>
 
-        <span className="text-white/60 text-sm">
-          {currentTrackIndex === index && isPlaying ? "Playing" : "Play"}
-        </span>
-      </div>
-    </button>
-  ))}
-</div>
+                  <span className="text-white/60 text-sm">
+                    {currentTrackIndex === index && isPlaying ? "Playing" : "Play"}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
 
 
           {/* ALBUMS */}
