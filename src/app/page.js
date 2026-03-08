@@ -1,5 +1,79 @@
 "use client"
+
+import { useRef, useState } from "react"
+
 export default function Home() {
+
+    const audioRef = useRef(null)
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const currentTrack = featuredTracks[currentTrackIndex]
+
+  const togglePlay = async () => {
+    if (!audioRef.current) return
+
+    if (isPlaying) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      try {
+        await audioRef.current.play()
+        setIsPlaying(true)
+      } catch (error) {
+        console.error("Playback failed:", error)
+      }
+    }
+  }
+
+  const playTrack = async (index) => {
+    setCurrentTrackIndex(index)
+    setIsPlaying(true)
+
+    setTimeout(async () => {
+      if (!audioRef.current) return
+      audioRef.current.load()
+      try {
+        await audioRef.current.play()
+      } catch (error) {
+        console.error("Playback failed:", error)
+      }
+    }, 0)
+  }
+
+  const playNext = async () => {
+    const nextIndex = (currentTrackIndex + 1) % featuredTracks.length
+    setCurrentTrackIndex(nextIndex)
+    setIsPlaying(true)
+
+    setTimeout(async () => {
+      if (!audioRef.current) return
+      audioRef.current.load()
+      try {
+        await audioRef.current.play()
+      } catch (error) {
+        console.error("Playback failed:", error)
+      }
+    }, 0)
+  }
+
+  const playPrev = async () => {
+    const prevIndex =
+      (currentTrackIndex - 1 + featuredTracks.length) % featuredTracks.length
+    setCurrentTrackIndex(prevIndex)
+    setIsPlaying(true)
+
+    setTimeout(async () => {
+      if (!audioRef.current) return
+      audioRef.current.load()
+      try {
+        await audioRef.current.play()
+      } catch (error) {
+        console.error("Playback failed:", error)
+      }
+    }, 0)
+  }
+
   const calendlyLink = "https://calendly.com/wanda-rogers/30min"
 
   const products = [
@@ -69,51 +143,66 @@ export default function Home() {
     },
   ]
 
+  const featuredTracks = [
+  {
+    title: "Mars",
+    src: "/music/some-experience-necessary/mars.mp3",
+  },
+  {
+    title: "Broken Mirrors",
+    src: "/music/im-not-a-rapper/broken-mirrors.mp3",
+  },
+  {
+    title: "Built For This",
+    src: "/music/im-not-a-rapper/built-for-this.mp3",
+  },
+]
+
   return (
     <main className="min-h-screen bg-black text-white">
       {/* NAVIGATION */}
-<header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
-  <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <div className="text-white font-semibold tracking-wide">
-      Wanda Rogers
-    </div>
+          <div className="text-white font-semibold tracking-wide">
+            Wanda Rogers
+          </div>
 
-    <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
+          <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
 
-      <a href="#about" className="hover:text-white transition">
-        About
-      </a>
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
 
-      <a href="#music" className="hover:text-white transition">
-        Music
-      </a>
+            <a href="#music" className="hover:text-white transition">
+              Music
+            </a>
 
-      <a href="#shop" className="hover:text-white transition">
-        Books
-      </a>
+            <a href="#shop" className="hover:text-white transition">
+              Books
+            </a>
 
-      <a href="#tools" className="hover:text-white transition">
-        Free Tools
-      </a>
+            <a href="#tools" className="hover:text-white transition">
+              Free Tools
+            </a>
 
-      <a href="#work" className="hover:text-white transition">
-        Coaching
-      </a>
+            <a href="#work" className="hover:text-white transition">
+              Coaching
+            </a>
 
-      <a
-        href="https://calendly.com/wanda-rogers/30min"
-        target="_blank"
-        rel="noreferrer"
-        className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium"
-      >
-        Book Call
-      </a>
+            <a
+              href="https://calendly.com/wanda-rogers/30min"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium"
+            >
+              Book Call
+            </a>
 
-    </nav>
+          </nav>
 
-  </div>
-</header> 
+        </div>
+      </header>
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur border-b border-white/10 bg-black/60">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -139,7 +228,7 @@ export default function Home() {
         </div>
       </header>
 
-            {/* HERO */}
+      {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-24 md:py-28 grid md:grid-cols-2 gap-14 items-center">
 
         <div>
@@ -314,48 +403,110 @@ export default function Home() {
         </div>
       </section>
 
-{/* MUSIC */}
-<section id="music" className="py-24 px-6 border-t border-white/10">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* MUSIC */}
+      <section id="music" className="py-24 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto">
 
-    <div>
-      <p className="text-white/50 tracking-widest text-xs uppercase">
-        Music
-      </p>
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-white/50 tracking-widest text-xs uppercase">
+              Music
+            </p>
 
-      <h2 className="mt-4 text-4xl font-semibold">
-        Creativity was music before it was anything else.
-      </h2>
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold">
+              Sound is another way I tell the story.
+            </h2>
 
-      <p className="mt-6 text-white/70 leading-relaxed">
-        Music has always been my first language of creativity.
-        Through sound and storytelling I explore identity,
-        emotion, and imagination.
-      </p>
+            <p className="mt-6 text-white/70 text-lg">
+              Music has always been one of the ways I translate emotion,
+              identity, creativity, and truth.
+            </p>
+          </div>
 
-      <p className="mt-6 text-white/60 leading-relaxed">
-        Today my music lives alongside my writing and coaching
-        as another way of translating truth.
-      </p>
 
-      <div className="mt-8">
-        <a
-          href="https://youtube.com"
-          target="_blank"
-          rel="noreferrer"
-          className="bg-white text-black px-6 py-3 rounded-xl text-sm font-medium"
-        >
-          Listen to My Music
-        </a>
+          <div className="mt-16 space-y-4">
+  {featuredTracks.map((track, index) => (
+    <button
+      key={track.title}
+      onClick={() => playTrack(index)}
+      className="w-full text-left bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/25 transition"
+    >
+      <div className="flex items-center justify-between gap-4">
+        <div>
+          <p className="text-white font-medium">{track.title}</p>
+          <p className="text-white/50 text-sm mt-1">
+            Click to play in the floating player
+          </p>
+        </div>
+
+        <span className="text-white/60 text-sm">
+          {currentTrackIndex === index && isPlaying ? "Playing" : "Play"}
+        </span>
       </div>
-    </div>
+    </button>
+  ))}
+</div>
 
-    <div className="aspect-video bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-white/40">
-      Music Video / Player
-    </div>
 
-  </div>
-</section>
+          {/* ALBUMS */}
+          <div className="mt-20 grid md:grid-cols-2 gap-10">
+
+            {/* ALBUM 1 */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+
+              <img
+                src="/music/some-experience-necessary/cover.jpg"
+                className="rounded-2xl mb-6"
+              />
+
+              <h3 className="text-2xl font-semibold">
+                Some Experience Necessary
+              </h3>
+
+              <p className="text-white/60 mt-3 text-sm">
+                A project rooted in exploration, emotion,
+                and the process of becoming.
+              </p>
+
+              <a
+                href="/free-downloads"
+                className="inline-block mt-6 bg-white text-black px-5 py-2 rounded-xl text-sm"
+              >
+                Free Download
+              </a>
+
+            </div>
+
+
+            {/* ALBUM 2 */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+
+              <img
+                src="/music/im-not-a-rapper/cover.jpg"
+                className="rounded-2xl mb-6"
+              />
+
+              <h3 className="text-2xl font-semibold">
+                I'm Not a Rapper
+              </h3>
+
+              <p className="text-white/60 mt-3 text-sm">
+                A project exploring voice, identity,
+                confidence, and creative range.
+              </p>
+
+              <a
+                href="/free-downloads"
+                className="inline-block mt-6 bg-white text-black px-5 py-2 rounded-xl text-sm"
+              >
+                Free Download
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
       {/* TRUST */}
       <section className="bg-neutral-950 py-20 px-6 border-y border-white/10">
@@ -508,55 +659,55 @@ export default function Home() {
       </section>
 
       {/* FREE TOOLS */}
-<section id="tools" className="py-24 px-6 border-t border-white/10 bg-neutral-950">
-  <div className="max-w-6xl mx-auto text-center">
+      <section id="tools" className="py-24 px-6 border-t border-white/10 bg-neutral-950">
+        <div className="max-w-6xl mx-auto text-center">
 
-    <p className="text-white/50 tracking-widest text-xs uppercase">
-      Free Tools
-    </p>
+          <p className="text-white/50 tracking-widest text-xs uppercase">
+            Free Tools
+          </p>
 
-    <h2 className="mt-4 text-4xl font-semibold">
-      Tools for unblocking your creativity
-    </h2>
+          <h2 className="mt-4 text-4xl font-semibold">
+            Tools for unblocking your creativity
+          </h2>
 
-    <p className="mt-6 text-white/70 max-w-2xl mx-auto">
-      These resources are designed to help creatives reset their mind,
-      capture ideas, and build momentum again.
-    </p>
+          <p className="mt-6 text-white/70 max-w-2xl mx-auto">
+            These resources are designed to help creatives reset their mind,
+            capture ideas, and build momentum again.
+          </p>
 
-    <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
 
-      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-        <h3 className="text-xl font-semibold">
-          Creative Block Reset
-        </h3>
-        <p className="mt-4 text-white/60 text-sm">
-          A short guide to help you reconnect with your creative flow.
-        </p>
-      </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+              <h3 className="text-xl font-semibold">
+                Creative Block Reset
+              </h3>
+              <p className="mt-4 text-white/60 text-sm">
+                A short guide to help you reconnect with your creative flow.
+              </p>
+            </div>
 
-      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-        <h3 className="text-xl font-semibold">
-          Idea Capture Sheet
-        </h3>
-        <p className="mt-4 text-white/60 text-sm">
-          A simple framework for collecting and organizing creative ideas.
-        </p>
-      </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+              <h3 className="text-xl font-semibold">
+                Idea Capture Sheet
+              </h3>
+              <p className="mt-4 text-white/60 text-sm">
+                A simple framework for collecting and organizing creative ideas.
+              </p>
+            </div>
 
-      <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-        <h3 className="text-xl font-semibold">
-          Creative Prompts
-        </h3>
-        <p className="mt-4 text-white/60 text-sm">
-          Writing and reflection prompts to spark new ideas.
-        </p>
-      </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+              <h3 className="text-xl font-semibold">
+                Creative Prompts
+              </h3>
+              <p className="mt-4 text-white/60 text-sm">
+                Writing and reflection prompts to spark new ideas.
+              </p>
+            </div>
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* COACHING */}
       <section id="work" className="py-24 px-6 max-w-6xl mx-auto">
@@ -677,6 +828,56 @@ export default function Home() {
           © {new Date().getFullYear()} Wanda Rogers. All rights reserved.
         </div>
       </footer>
+
+      {/* FLOATING MUSIC PLAYER */}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] max-w-4xl z-50">
+        <div className="bg-black/90 backdrop-blur border border-white/10 rounded-2xl px-5 py-4 shadow-2xl">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p className="text-white/50 text-xs tracking-widest uppercase">
+                Now Playing
+              </p>
+              <p className="text-white font-medium mt-1">
+                {currentTrack.title}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <button
+                onClick={playPrev}
+                className="border border-white/15 text-white px-4 py-2 rounded-xl text-sm hover:border-white/30"
+              >
+                Prev
+              </button>
+
+              <button
+                onClick={togglePlay}
+                className="bg-white text-black px-5 py-2 rounded-xl text-sm font-medium"
+              >
+                {isPlaying ? "Pause" : "Play"}
+              </button>
+
+              <button
+                onClick={playNext}
+                className="border border-white/15 text-white px-4 py-2 rounded-xl text-sm hover:border-white/30"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <audio
+            ref={audioRef}
+            className="w-full mt-4"
+            onEnded={playNext}
+            onPause={() => setIsPlaying(false)}
+            onPlay={() => setIsPlaying(true)}
+          >
+            <source src={currentTrack.src} type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+
     </main>
   )
 }
