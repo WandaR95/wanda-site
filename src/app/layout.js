@@ -1,7 +1,11 @@
+import "./globals.css"
+
 export const metadata = {
-  title: "Wanda Rogers | Artist, Author, Creativity Coach",
-  description:
-    "The official website of Wanda Rogers — music, books, free creative tools, coaching, and Mellow Mastermind.",
+  title: "Wanda Rogers",
+  description: "Artist, author, and creativity coach",
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({ children }) {

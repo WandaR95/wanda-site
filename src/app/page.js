@@ -114,7 +114,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white pb-32">
+    <main className="relative min-h-screen bg-[#050505] text-white pb-32">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_20%_20%,rgba(79,70,229,0.10),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_25%)]" />
 
       {/* NAV */}
@@ -155,7 +155,7 @@ export default function Home() {
               <span className="block text-white/70">clear, grounded, and real.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white/68">
+            <p className="mt-8 text-white/68 text-lg md:text-xl leading-relaxed max-w-xl">
               I’m Wanda Rogers. I make music, write books, build tools for creatives,
               and help people move through the invisible blocks that keep their gifts buried.
             </p>
@@ -191,13 +191,12 @@ export default function Home() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-white/10 via-transparent to-white/5 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
-              <img
-                src="/wanda-hero.jpg"
-                alt="Wanda Rogers"
-                className="w-full h-full object-cover"
-              />
-            </div>
+
+            <img
+              src="/wanda-hero.jpg"
+              alt="Wanda Rogers"
+              className="relative rounded-[2rem] w-full shadow-2xl object-cover border border-white/10"
+            />
           </div>
         </div>
       </section>
@@ -248,7 +247,20 @@ export default function Home() {
       </section>
 
       {/* MUSIC */}
-      <section id="music" className="border-t border-white/10 bg-white/[0.02]">
+      <section id="music" className="relative overflow-hidden border-t border-white/10 bg-white/[0.02]">
+
+        <div className="absolute inset-0 -z-10 flex items-end justify-center gap-2 opacity-[0.08]">
+          <div className="h-24 w-2 rounded-full bg-white animate-pulse" />
+          <div className="h-40 w-2 rounded-full bg-white animate-pulse [animation-delay:120ms]" />
+          <div className="h-28 w-2 rounded-full bg-white animate-pulse [animation-delay:240ms]" />
+          <div className="h-52 w-2 rounded-full bg-white animate-pulse [animation-delay:360ms]" />
+          <div className="h-32 w-2 rounded-full bg-white animate-pulse [animation-delay:480ms]" />
+          <div className="h-44 w-2 rounded-full bg-white animate-pulse [animation-delay:600ms]" />
+          <div className="h-20 w-2 rounded-full bg-white animate-pulse [animation-delay:720ms]" />
+          <div className="h-36 w-2 rounded-full bg-white animate-pulse [animation-delay:840ms]" />
+          <div className="h-24 w-2 rounded-full bg-white animate-pulse [animation-delay:960ms]" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
             <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
@@ -496,7 +508,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-white/55">
           <div>
             <h3 className="text-white font-semibold mb-3">Wanda Rogers</h3>
-            <p>Artist, author, creativity coach, and founder of Mellow Mastermind.</p>
+            <p className="text-white/60 leading-relaxed">
+              Artist, author, and creativity coach helping creatives move from resistance
+              to expression through music, books, and the Mellow Mastermind framework.
+            </p>
           </div>
 
           <div>
@@ -519,7 +534,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/mellowmastermind"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white"
@@ -529,7 +544,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/wandarogers95"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white"
