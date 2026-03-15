@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
+import { motion } from "framer-motion"
 
 const featuredTracks = [
   {
@@ -38,6 +39,15 @@ const featuredBooks = [
       "A memoir of resilience, rhythm, and renewal for anyone who has survived more than they often say out loud.",
   },
 ]
+
+const revealUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+}
 
 export default function Home() {
   const audioRef = useRef(null)
@@ -114,27 +124,40 @@ export default function Home() {
   }
 
   return (
-    <main className="relative min-h-screen bg-[#050505] text-white pb-32">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_20%_20%,rgba(79,70,229,0.10),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_25%)]" />
+    <main className="relative min-h-screen bg-cream text-ink pb-32">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.12),transparent_28%),radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.10),transparent_22%),radial-gradient(circle_at_80%_10%,rgba(249,115,22,0.10),transparent_22%)]" />
 
       {/* NAV */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-[rgba(247,243,237,0.82)] backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-sm md:text-base font-semibold tracking-[0.18em] uppercase text-white">
+          <a
+            href="#"
+            className="text-sm md:text-base font-semibold tracking-[0.18em] uppercase text-ink"
+          >
             Wanda Rogers
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-white/65">
-            <a href="#about" className="hover:text-white transition">About</a>
-            <a href="#music" className="hover:text-white transition">Music</a>
-            <a href="#books" className="hover:text-white transition">Books</a>
-            <a href="#community" className="hover:text-white transition">Community</a>
-            <a href="#work" className="hover:text-white transition">Coaching</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm text-muted">
+            <a href="#about" className="hover:text-ink transition">
+              About
+            </a>
+            <a href="#music" className="hover:text-ink transition">
+              Music
+            </a>
+            <a href="#books" className="hover:text-ink transition">
+              Books
+            </a>
+            <a href="#community" className="hover:text-ink transition">
+              Community
+            </a>
+            <a href="#work" className="hover:text-ink transition">
+              Coaching
+            </a>
             <a
               href={calendlyLink}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/15 bg-white text-black px-5 py-2 font-medium hover:opacity-90 transition"
+              className="rounded-full bg-brandPurple text-white px-5 py-2 font-medium hover:opacity-90 transition"
             >
               Book Call
             </a>
@@ -145,65 +168,151 @@ export default function Home() {
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 pt-14 md:pt-20 pb-20">
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
-          <div>
-            <p className="text-[11px] tracking-[0.32em] uppercase text-white/45">
-              Artist • Author • Creativity Coach
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <p className="text-[11px] tracking-[0.32em] uppercase text-ink/50">
+              Artist • Author • Architect of creative clarity and freedom
             </p>
 
-            <h1 className="mt-5 text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight">
+            <h1 className="mt-5 text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight text-ink">
               A creative life that feels
-              <span className="block text-white/70">clear, grounded, and real.</span>
+              <span className="block text-brandPurple">clear, grounded, and real.</span>
             </h1>
 
-            <p className="mt-8 text-white/68 text-lg md:text-xl leading-relaxed max-w-xl">
-              I’m Wanda Rogers. I make music, write books, build tools for creatives,
-              and help people move through the invisible blocks that keep their gifts buried.
+            <p className="mt-8 text-muted text-lg md:text-xl leading-relaxed max-w-xl">
+              I’m Wanda Rogers. I make music, write books, build tools for
+              creatives, and help people move through the invisible blocks that
+              keep their gifts buried.
             </p>
 
-            <p className="mt-5 max-w-2xl leading-relaxed text-white/52">
-              Through <span className="text-white font-medium">Mellow Mastermind</span>,
-              I’m creating a space where creativity, identity, and self-trust can grow together.
+            <p className="mt-5 max-w-2xl leading-relaxed text-muted">
+              Through <span className="text-brandPurple font-semibold">Mellow Mastermind</span>,
+              I’m creating a space where creativity, identity, and self-trust can
+              grow together.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="/free-downloads"
-                className="rounded-full bg-white text-black px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+                className="rounded-full bg-brandPurple text-white px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
               >
                 Get Free Music
               </a>
 
               <a
                 href="#music"
-                className="rounded-full border border-white/15 px-6 py-3 text-sm text-white/80 hover:text-white hover:border-white/30 transition"
+                className="rounded-full border border-brandBlue/30 px-6 py-3 text-sm text-brandBlue hover:bg-blueTint transition"
               >
                 Listen Now
               </a>
 
               <a
                 href="#work"
-                className="rounded-full border border-white/15 px-6 py-3 text-sm text-white/80 hover:text-white hover:border-white/30 transition"
+                className="rounded-full border border-brandOrange/30 px-6 py-3 text-sm text-brandOrange hover:bg-peachTint transition"
               >
                 Work With Me
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-white/10 via-transparent to-white/5 blur-2xl" />
-
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+          >
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brandPurple/15 via-transparent to-brandOrange/10 blur-2xl" />
             <img
               src="/wanda-hero.jpg"
               alt="Wanda Rogers"
-              className="relative rounded-[2rem] w-full shadow-2xl object-cover border border-white/10"
+              className="relative rounded-[2rem] w-full shadow-2xl object-cover border border-black/10"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
+      {/* CREATIVE UNIVERSE */}
+      <motion.section
+        className="border-t border-black/10"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="max-w-3xl">
+            <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
+              Creative Universe
+            </p>
+
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-ink">
+              Everything I build comes from the same source.
+            </h2>
+
+            <p className="mt-6 text-muted text-lg leading-relaxed">
+              Music, books, coaching, and creative tools are all expressions of
+              the same mission: helping people reconnect with their voice and
+              create something meaningful with it.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-14">
+            <div className="rounded-[1.5rem] border border-black/10 bg-surface p-7 shadow-sm">
+              <h3 className="text-xl font-semibold text-ink">Music</h3>
+
+              <p className="mt-3 text-muted">
+                My music explores identity, growth, and creative freedom.
+              </p>
+
+              <a
+                href="#music"
+                className="inline-block mt-5 text-sm text-brandBlue hover:opacity-80"
+              >
+                Listen →
+              </a>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-black/10 bg-surface p-7 shadow-sm">
+              <h3 className="text-xl font-semibold text-ink">Books</h3>
+
+              <p className="mt-3 text-muted">
+                Writing that helps creatives understand themselves and move
+                through the blocks that hold them back.
+              </p>
+
+              <a
+                href="#books"
+                className="inline-block mt-5 text-sm text-brandBlue hover:opacity-80"
+              >
+                Explore →
+              </a>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-black/10 bg-surface p-7 shadow-sm">
+              <h3 className="text-xl font-semibold text-ink">Mellow Mastermind</h3>
+
+              <p className="mt-3 text-muted">
+                A framework and community focused on clarity, self-trust, and
+                sustainable creativity.
+              </p>
+
+              <a
+                href="#community"
+                className="inline-block mt-5 text-sm text-brandBlue hover:opacity-80"
+              >
+                Learn more →
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* BRAND STRIP */}
-      <section className="border-y border-white/10 bg-white/[0.03]">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center gap-x-10 gap-y-3 text-sm text-white/50">
+      <section className="border-y border-black/10 bg-surface/70">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center gap-x-10 gap-y-3 text-sm text-muted">
           <span>Music</span>
           <span>Books</span>
           <span>Free Creative Tools</span>
@@ -213,67 +322,81 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+      <motion.section
+        id="about"
+        className="max-w-7xl mx-auto px-6 py-20 md:py-24"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
           <div>
-            <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+            <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
               About
             </p>
 
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
               I help creatives stop fighting themselves.
             </h2>
           </div>
 
-          <div className="space-y-6 text-white/68 text-lg leading-relaxed">
+          <div className="space-y-6 text-muted text-lg leading-relaxed">
             <p>
-              I’m an artist, author, and creativity coach who understands how easy it is
-              to have real talent and still feel stuck, scattered, inconsistent, or disconnected
-              from your own voice.
+              I’m an artist, author, and creativity coach who understands how
+              easy it is to have real talent and still feel stuck, scattered,
+              inconsistent, or disconnected from your own voice.
             </p>
 
             <p>
-              My work sits at the intersection of creative psychology, identity, nervous system awareness,
-              and execution. I help people understand what their resistance is protecting,
-              then build a way forward that feels sustainable instead of forced.
+              My work sits at the intersection of creative psychology, identity,
+              nervous system awareness, and execution. I help people understand
+              what their resistance is protecting, then build a way forward that
+              feels sustainable instead of forced.
             </p>
 
             <p>
-              This isn’t about hustling harder. It’s about making room for the kind of creativity
-              that can actually last.
+              This isn’t about hustling harder. It’s about making room for the
+              kind of creativity that can actually last.
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* MUSIC */}
-      <section id="music" className="relative overflow-hidden border-t border-white/10 bg-white/[0.02]">
-
-        <div className="absolute inset-0 -z-10 flex items-end justify-center gap-2 opacity-[0.08]">
-          <div className="h-24 w-2 rounded-full bg-white animate-pulse" />
-          <div className="h-40 w-2 rounded-full bg-white animate-pulse [animation-delay:120ms]" />
-          <div className="h-28 w-2 rounded-full bg-white animate-pulse [animation-delay:240ms]" />
-          <div className="h-52 w-2 rounded-full bg-white animate-pulse [animation-delay:360ms]" />
-          <div className="h-32 w-2 rounded-full bg-white animate-pulse [animation-delay:480ms]" />
-          <div className="h-44 w-2 rounded-full bg-white animate-pulse [animation-delay:600ms]" />
-          <div className="h-20 w-2 rounded-full bg-white animate-pulse [animation-delay:720ms]" />
-          <div className="h-36 w-2 rounded-full bg-white animate-pulse [animation-delay:840ms]" />
-          <div className="h-24 w-2 rounded-full bg-white animate-pulse [animation-delay:960ms]" />
+      <motion.section
+        id="music"
+        className="relative overflow-hidden border-t border-black/10 bg-[#F9F6F1]"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="absolute inset-0 -z-10 flex items-end justify-center gap-2 opacity-[0.07]">
+          <div className="h-24 w-2 rounded-full bg-brandPurple animate-pulse" />
+          <div className="h-40 w-2 rounded-full bg-brandBlue animate-pulse [animation-delay:120ms]" />
+          <div className="h-28 w-2 rounded-full bg-brandOrange animate-pulse [animation-delay:240ms]" />
+          <div className="h-52 w-2 rounded-full bg-brandPurple animate-pulse [animation-delay:360ms]" />
+          <div className="h-32 w-2 rounded-full bg-brandBlue animate-pulse [animation-delay:480ms]" />
+          <div className="h-44 w-2 rounded-full bg-brandOrange animate-pulse [animation-delay:600ms]" />
+          <div className="h-20 w-2 rounded-full bg-brandPurple animate-pulse [animation-delay:720ms]" />
+          <div className="h-36 w-2 rounded-full bg-brandBlue animate-pulse [animation-delay:840ms]" />
+          <div className="h-24 w-2 rounded-full bg-brandOrange animate-pulse [animation-delay:960ms]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+            <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
               Music
             </p>
 
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
               Sound is part of the story too.
             </h2>
 
-            <p className="mt-6 text-lg leading-relaxed text-white/65">
-              These featured tracks give people a quick way into my creative world:
-              identity, depth, and forward motion.
+            <p className="mt-6 text-lg leading-relaxed text-muted">
+              These featured tracks give people a quick way into my creative
+              world: identity, depth, and forward motion.
             </p>
           </div>
 
@@ -283,15 +406,15 @@ export default function Home() {
                 <button
                   key={track.title}
                   onClick={() => playTrack(index)}
-                  className="w-full text-left rounded-[1.5rem] border border-white/10 bg-white/[0.04] px-6 py-5 hover:border-white/25 hover:bg-white/[0.06] transition"
+                  className="w-full text-left rounded-[1.5rem] border border-black/10 bg-surface px-6 py-5 hover:border-brandPurple/25 hover:bg-lavenderTint transition shadow-sm"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-white font-medium">{track.title}</p>
-                      <p className="mt-1 text-sm text-white/45">{track.album}</p>
+                      <p className="text-ink font-medium">{track.title}</p>
+                      <p className="mt-1 text-sm text-muted">{track.album}</p>
                     </div>
 
-                    <span className="rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/60">
+                    <span className="rounded-full border border-brandPurple/20 px-4 py-2 text-xs uppercase tracking-[0.2em] text-brandPurple">
                       {currentTrackIndex === index && isPlaying ? "Playing" : "Play"}
                     </span>
                   </div>
@@ -300,28 +423,36 @@ export default function Home() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
+              <div className="rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm">
                 <img
                   src="/music/some-experience-necessary/cover.jpg"
                   alt="Some Experience Necessary cover"
                   className="w-full rounded-[1.25rem] mb-5"
                 />
-                <p className="text-sm uppercase tracking-[0.2em] text-white/40">Album</p>
-                <h3 className="mt-2 text-2xl font-semibold">Some Experience Necessary</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/55">
+                <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
+                  Album
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold text-ink">
+                  Some Experience Necessary
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
                   Exploration, emotion, and the process of becoming.
                 </p>
               </div>
 
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6">
+              <div className="rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm">
                 <img
                   src="/music/im-not-a-rapper/cover.jpg"
                   alt="I'm Not a Rapper cover"
                   className="w-full rounded-[1.25rem] mb-5"
                 />
-                <p className="text-sm uppercase tracking-[0.2em] text-white/40">Album</p>
-                <h3 className="mt-2 text-2xl font-semibold">I&apos;m Not a Rapper</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/55">
+                <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
+                  Album
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold text-ink">
+                  I&apos;m Not a Rapper
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
                   Voice, contradiction, confidence, and range.
                 </p>
               </div>
@@ -331,22 +462,29 @@ export default function Home() {
           <div className="mt-10">
             <a
               href="/free-downloads"
-              className="inline-flex rounded-full bg-white text-black px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+              className="inline-flex rounded-full bg-brandOrange text-white px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
             >
               Unlock Free Downloads
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* BOOKS */}
-      <section id="books" className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+      <motion.section
+        id="books"
+        className="max-w-7xl mx-auto px-6 py-20 md:py-24"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="max-w-3xl">
-          <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+          <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
             Books
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+          <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
             Books and workbooks for the creative process.
           </h2>
         </div>
@@ -358,55 +496,63 @@ export default function Home() {
               href={book.link}
               target="_blank"
               rel="noreferrer"
-              className="group rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-7 hover:border-white/25 transition"
+              className="group rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm"
             >
               <img
                 src={book.image}
                 alt={book.title}
-                className="w-full rounded-[1.25rem] shadow-2xl"
+                className="w-full rounded-[1.25rem] shadow-xl"
               />
 
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-xs uppercase tracking-[0.2em] text-white/40">
+                <span className="text-xs uppercase tracking-[0.2em] text-ink/40">
                   {book.format}
                 </span>
-                <span className="text-sm text-white/50 group-hover:text-white/70 transition">
+                <span className="text-sm text-brandBlue group-hover:opacity-80 transition">
                   View →
                 </span>
               </div>
 
-              <h3 className="mt-4 text-2xl font-semibold leading-snug">
+              <h3 className="mt-4 text-2xl font-semibold leading-snug text-ink">
                 {book.title}
               </h3>
 
-              <p className="mt-4 text-white/58 leading-relaxed">
+              <p className="mt-4 text-muted leading-relaxed">
                 {book.description}
               </p>
 
-              <div className="mt-7 inline-flex rounded-full bg-white text-black px-5 py-2.5 text-sm font-semibold">
+              <div className="mt-7 inline-flex rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold">
                 Buy on Lulu
               </div>
             </a>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* COMMUNITY / METHOD */}
-      <section id="community" className="border-t border-white/10 bg-white/[0.02]">
+      <motion.section
+        id="community"
+        className="border-t border-black/10 bg-[#F9F6F1]"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
             <div>
-              <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+              <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
                 Mellow Mastermind
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
+              <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
                 A framework and community for creatives building from truth.
               </h2>
 
-              <p className="mt-6 text-white/62 leading-relaxed">
-                Mellow Mastermind is the part of my brand focused on creative support,
-                sustainable output, and helping people work with their minds instead of against them.
+              <p className="mt-6 text-muted leading-relaxed">
+                Mellow Mastermind is the part of my brand focused on creative
+                support, sustainable output, and helping people work with their
+                minds instead of against them.
               </p>
             </div>
 
@@ -424,34 +570,48 @@ export default function Home() {
                   title: "Sustainability",
                   desc: "Create systems that let your output keep going without burning you out.",
                 },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6"
-                >
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-white/55 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+              ].map((item, i) => {
+                const tintClasses = [
+                  "bg-lavenderTint",
+                  "bg-blueTint",
+                  "bg-peachTint",
+                ]
+                return (
+                  <div
+                    key={item.title}
+                    className={`rounded-[1.5rem] border border-black/10 ${tintClasses[i]} p-6`}
+                  >
+                    <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
+                    <p className="mt-3 text-muted leading-relaxed">{item.desc}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* COACHING */}
-      <section id="work" className="max-w-7xl mx-auto px-6 py-20 md:py-24">
-        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 md:p-14 text-center shadow-2xl">
-          <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+      <motion.section
+        id="work"
+        className="max-w-7xl mx-auto px-6 py-20 md:py-24"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="rounded-[2rem] border border-black/10 bg-surface p-10 md:p-14 text-center shadow-xl">
+          <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
             Coaching
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+          <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-ink">
             Work with me directly.
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed text-white/65">
-            For creatives who want deeper support around identity, creative blocks,
-            self-trust, and building a more sustainable body of work.
+          <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed text-muted">
+            For creatives who want deeper support around identity, creative
+            blocks, self-trust, and building a more sustainable body of work.
           </p>
 
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
@@ -459,76 +619,100 @@ export default function Home() {
               href={calendlyLink}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:opacity-90 transition"
+              className="rounded-full bg-brandPurple text-white px-8 py-3.5 text-sm font-semibold hover:opacity-90 transition"
             >
               Apply / Book a Call
             </a>
 
             <a
               href="/free-downloads"
-              className="rounded-full border border-white/15 px-8 py-3.5 text-sm text-white/80 hover:text-white hover:border-white/30 transition"
+              className="rounded-full border border-brandBlue/30 px-8 py-3.5 text-sm text-brandBlue hover:bg-blueTint transition"
             >
               Start with Free Music
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* FREE TOOLS CTA */}
-      <section id="tools" className="border-t border-white/10">
+      <motion.section
+        id="tools"
+        className="border-t border-black/10"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-10">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center rounded-[2rem] border border-black/10 bg-surface p-8 md:p-10 shadow-sm">
             <div>
-              <p className="text-[11px] tracking-[0.28em] uppercase text-white/45">
+              <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
                 Free Tools
               </p>
 
-              <h2 className="mt-4 text-3xl md:text-4xl font-semibold">
+              <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-ink">
                 Start with something free.
               </h2>
 
-              <p className="mt-4 max-w-2xl text-white/60 leading-relaxed">
-                Get free music, creative tools, and updates on new releases, books,
-                and future Mellow Mastermind offerings.
+              <p className="mt-4 max-w-2xl text-muted leading-relaxed">
+                Get free music, creative tools, and updates on new releases,
+                books, and future Mellow Mastermind offerings.
               </p>
             </div>
 
             <a
               href="/free-downloads"
-              className="inline-flex items-center justify-center rounded-full bg-white text-black px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
+              className="inline-flex items-center justify-center rounded-full bg-brandOrange text-white px-7 py-3.5 text-sm font-semibold hover:opacity-90 transition"
             >
               Get Free Downloads
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-black">
-        <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-white/55">
+      <footer className="border-t border-black/10 bg-[#F2ECE4]">
+        <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-muted">
           <div>
-            <h3 className="text-white font-semibold mb-3">Wanda Rogers</h3>
-            <p className="text-white/60 leading-relaxed">
-              Artist, author, and creativity coach helping creatives move from resistance
-              to expression through music, books, and the Mellow Mastermind framework.
+            <h3 className="text-ink font-semibold mb-3">Wanda Rogers</h3>
+            <p className="leading-relaxed">
+              Artist, author, and creativity coach helping creatives move from
+              resistance to expression through music, books, and the Mellow
+              Mastermind framework.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-3">Explore</h4>
+            <h4 className="text-ink font-semibold mb-3">Explore</h4>
             <ul className="space-y-2">
-              <li><a href="#music" className="hover:text-white">Music</a></li>
-              <li><a href="#books" className="hover:text-white">Books</a></li>
-              <li><a href="#community" className="hover:text-white">Mellow Mastermind</a></li>
-              <li><a href="#work" className="hover:text-white">Coaching</a></li>
+              <li>
+                <a href="#music" className="hover:text-ink">
+                  Music
+                </a>
+              </li>
+              <li>
+                <a href="#books" className="hover:text-ink">
+                  Books
+                </a>
+              </li>
+              <li>
+                <a href="#community" className="hover:text-ink">
+                  Mellow Mastermind
+                </a>
+              </li>
+              <li>
+                <a href="#work" className="hover:text-ink">
+                  Coaching
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-3">Connect</h4>
+            <h4 className="text-ink font-semibold mb-3">Connect</h4>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:hello@wandarogers.com" className="hover:text-white">
+                <a href="mailto:hello@wandarogers.com" className="hover:text-ink">
                   hello@wandarogers.com
                 </a>
               </li>
@@ -537,17 +721,17 @@ export default function Home() {
                   href="https://www.instagram.com/mellowmastermind"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-white"
+                  className="hover:text-ink"
                 >
                   Instagram
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/wandarogers95"
+                  href="https://www.linkedin.com/in/wandarogers95"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-white"
+                  className="hover:text-ink"
                 >
                   LinkedIn
                 </a>
@@ -556,7 +740,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 pb-8 text-xs text-white/35">
+        <div className="max-w-7xl mx-auto px-6 pb-8 text-xs text-ink/40">
           © {new Date().getFullYear()} Wanda Rogers. All rights reserved.
         </div>
       </footer>
@@ -564,34 +748,34 @@ export default function Home() {
       {/* FLOATING PLAYER */}
       {playerVisible && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] max-w-3xl z-50">
-          <div className="rounded-[1.5rem] border border-white/10 bg-black/85 backdrop-blur-xl px-5 py-4 shadow-2xl">
+          <div className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,253,249,0.92)] backdrop-blur-xl px-5 py-4 shadow-2xl">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-white/40">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-ink/40">
                   Now Playing
                 </p>
-                <p className="mt-1 text-white font-medium">{currentTrack.title}</p>
-                <p className="text-sm text-white/40">{currentTrack.album}</p>
+                <p className="mt-1 text-ink font-medium">{currentTrack.title}</p>
+                <p className="text-sm text-muted">{currentTrack.album}</p>
               </div>
 
               <div className="flex items-center gap-3">
                 <button
                   onClick={playPrev}
-                  className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:border-white/30"
+                  className="rounded-full border border-black/10 px-4 py-2 text-sm text-ink hover:border-brandBlue/30"
                 >
                   Prev
                 </button>
 
                 <button
                   onClick={togglePlay}
-                  className="rounded-full bg-white text-black px-5 py-2 text-sm font-semibold"
+                  className="rounded-full bg-brandPurple text-white px-5 py-2 text-sm font-semibold"
                 >
                   {isPlaying ? "Pause" : "Play"}
                 </button>
 
                 <button
                   onClick={playNext}
-                  className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:border-white/30"
+                  className="rounded-full border border-black/10 px-4 py-2 text-sm text-ink hover:border-brandBlue/30"
                 >
                   Next
                 </button>
