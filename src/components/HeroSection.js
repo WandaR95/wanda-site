@@ -37,14 +37,14 @@ export default function HeroSection() {
                 href="#lead-magnet"
                 className="rounded-full bg-brandPurple text-white px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
               >
-                Get the Free Creative Reset
+                Get Your Free Creative Clarity Guide
               </a>
 
               <a
                 href="#music"
                 className="rounded-full border border-brandBlue/30 px-6 py-3 text-sm text-brandBlue hover:bg-blueTint transition"
               >
-                Listen to the Music
+                Listen to My Music
               </a>
 
               <a

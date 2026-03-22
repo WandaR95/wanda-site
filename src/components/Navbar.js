@@ -4,7 +4,7 @@ export default function Navbar({ calendlyLink }) {
   const links = [
     { label: "Music", href: "#music" },
     { label: "Books", href: "#books" },
-    { label: "Free Reset", href: "#lead-magnet" },
+    { label: "Creative Clarity Guide", href: "#lead-magnet" },
     { label: "Mellow Mastermind", href: "#mellow-mastermind" }
   ]
 

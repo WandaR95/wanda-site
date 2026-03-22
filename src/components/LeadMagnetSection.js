@@ -20,7 +20,7 @@ export default function LeadMagnetSection({ revealUp }) {
             <Reveal delay={0.04}>
               <div>
                 <p className="text-[11px] tracking-[0.32em] uppercase text-ink/50">
-                  Free Resource
+                  Mellow Mastermind
                 </p>
 
                 <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">

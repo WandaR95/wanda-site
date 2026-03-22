@@ -53,7 +53,7 @@ const featuredBooks = [
     link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/paperback/product-kvddgn4.html?page=1&pageSize=4",
     description:
       "A guide for creatives navigating resistance, rebuilding momentum, and learning how to work with their creativity instead of against it.",
-    cta: "Get the Book",
+    cta: "Get Unblocked Now",
   },
   {
     title: "The First to Make It This Far",
@@ -62,7 +62,7 @@ const featuredBooks = [
     link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
     description:
       "A story about resilience, identity, and making it through what was supposed to break you.",
-    cta: "Read the Story",
+    cta: "Read My Story",
   },
 ]
 

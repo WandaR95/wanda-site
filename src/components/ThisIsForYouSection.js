@@ -23,7 +23,7 @@ export default function ThisIsForYouSection() {
                 You’re not lacking talent. You may just need a different way back in.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-muted">
-                The Creative Reset was made for people who are ready to reconnect
+                The Mellow Mastermind Creative Clarity Guide was made for people who are ready to reconnect
                 with their creativity in a way that feels grounded, clear, and real.
               </p>
             </div>

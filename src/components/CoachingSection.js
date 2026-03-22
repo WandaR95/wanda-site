@@ -74,7 +74,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
                 href="#lead-magnet"
                 className="rounded-full border border-brandBlue/30 px-8 py-3.5 text-sm text-brandBlue hover:bg-blueTint transition"
               >
-                Start with the Free Resource
+                Start With the Creative Clarity Guide
               </a>
             </div>
           </div>
