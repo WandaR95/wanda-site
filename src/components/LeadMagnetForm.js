@@ -131,7 +131,7 @@ export default function LeadMagnetForm() {
         disabled={submitting}
         className="w-full rounded-2xl bg-brandPurple px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {submitting ? "Submitting..." : "Get Your FREE Creative Clarity Guide! :)"}
+        {submitting ? "Submitting..." : "Get Your Creative Clarity Guide!"}
       </button>
     </form>
   )
