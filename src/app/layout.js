@@ -1,8 +1,9 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "Wanda Rogers",
-  description: "Artist, author, and creativity coach",
+  title: "Wanda Rogers | Artist, Author, Founder of Mellow Mastermind",
+  description:
+    "Wanda Rogers is an artist, author, and founder of Mellow Mastermind — a creative framework for clarity, self-trust, and sustainable expression.",
   icons: {
     icon: "/favicon.png",
   },
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white antialiased">
+      <body
+        className="bg-cream text-ink antialiased"
+        suppressHydrationWarning
+      >
         {children}
 
         <script
