@@ -144,7 +144,7 @@ select {
   position: absolute;
   border-radius: 999px;
   filter: blur(90px);
-  opacity: 0.2;
+  opacity: 0.28;
   will-change: transform;
   animation: ambientFloat 18s ease-in-out infinite alternate;
 }
@@ -154,7 +154,7 @@ select {
   height: 28rem;
   top: 6%;
   left: 4%;
-  background: rgba(124, 58, 237, 0.22);
+  background: rgba(124, 58, 237, 0.24);
   animation-delay: 0s;
 }
 
@@ -163,7 +163,7 @@ select {
   height: 24rem;
   top: 30%;
   right: 6%;
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(37, 99, 235, 0.2);
   animation-delay: 2s;
 }
 
@@ -172,7 +172,7 @@ select {
   height: 26rem;
   bottom: 4%;
   left: 32%;
-  background: rgba(249, 115, 22, 0.14);
+  background: rgba(249, 115, 22, 0.16);
   animation-delay: 4s;
 }
 

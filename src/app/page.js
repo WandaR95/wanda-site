@@ -14,9 +14,10 @@ import CoachingSection from "@/components/CoachingSection"
 import WhatThisWorkHoldsSection from "@/components/WhatThisWorkHoldsSection"
 import Footer from "@/components/Footer"
 import FloatingPlayer from "@/components/FloatingPlayer"
-import ScrollProgressBar from "@/components/ScrollProgressBar"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 import AmbientBackground from "@/components/AmbientBackground"
+import ScrollProgressBar from "@/components/ScrollProgressBar"
+
 
 const featuredTracks = [
   {
@@ -189,51 +190,52 @@ export default function Home() {
     <main className="pt-8 relative min-h-screen bg-cream text-ink pb-32 overflow-hidden">
       <AmbientBackground />
       <ScrollProgressBar />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.12),transparent_28%),radial-gradient(circle_at_20%_18%,rgba(37,99,235,0.10),transparent_20%),radial-gradient(circle_at_82%_10%,rgba(249,115,22,0.10),transparent_24%)]" />
+      {/* <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.12),transparent_28%),radial-gradient(circle_at_20%_18%,rgba(37,99,235,0.10),transparent_20%),radial-gradient(circle_at_82%_10%,rgba(249,115,22,0.10),transparent_24%)]" />  */}
+      <div className="relative z-10"/>
 
-      <Navbar calendlyLink={calendlyLink} />
+        <Navbar calendlyLink={calendlyLink} />
 
-      <HeroSection calendlyLink={calendlyLink} />
-      <ChooseYourPathSection revealUp={revealUp} />
+        <HeroSection calendlyLink={calendlyLink} />
+        <ChooseYourPathSection revealUp={revealUp} />
 
-      <MusicSection
-        revealUp={revealUp}
-        featuredTracks={featuredTracks}
-        currentTrackIndex={currentTrackIndex}
-        isPlaying={isPlaying}
-        playTrack={playTrack}
-      />
+        <MusicSection
+          revealUp={revealUp}
+          featuredTracks={featuredTracks}
+          currentTrackIndex={currentTrackIndex}
+          isPlaying={isPlaying}
+          playTrack={playTrack}
+        />
 
-      <ThisIsForYouSection />
-      <LeadMagnetSection revealUp={revealUp} />
+        <ThisIsForYouSection />
+        <LeadMagnetSection revealUp={revealUp} />
 
-      <BooksSection
-        revealUp={revealUp}
-        featuredBooks={featuredBooks}
-      />
+        <BooksSection
+          revealUp={revealUp}
+          featuredBooks={featuredBooks}
+        />
 
-      <AboutSection revealUp={revealUp} />
-      <MellowMastermindSection revealUp={revealUp} />
-      <CoachingSection
-        revealUp={revealUp}
-        calendlyLink={calendlyLink}
-      />
-      <WhatThisWorkHoldsSection revealUp={revealUp} />
-      <Footer />
+        <AboutSection revealUp={revealUp} />
+        <MellowMastermindSection revealUp={revealUp} />
+        <CoachingSection
+          revealUp={revealUp}
+          calendlyLink={calendlyLink}
+        />
+        <WhatThisWorkHoldsSection revealUp={revealUp} />
+        <Footer />
 
-      <FloatingPlayer
-        playerVisible={playerVisible}
-        currentTrack={featuredTracks[currentTrackIndex]}
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        togglePlay={togglePlay}
-        playPrev={playPrev}
-        playNext={playNext}
-        stopPlayback={stopPlayback}
-        setIsPlaying={setIsPlaying}
-        setPlayerVisible={setPlayerVisible}
-      />
-      <ScrollToTopButton />
+        <FloatingPlayer
+          playerVisible={playerVisible}
+          currentTrack={featuredTracks[currentTrackIndex]}
+          audioRef={audioRef}
+          isPlaying={isPlaying}
+          togglePlay={togglePlay}
+          playPrev={playPrev}
+          playNext={playNext}
+          stopPlayback={stopPlayback}
+          setIsPlaying={setIsPlaying}
+          setPlayerVisible={setPlayerVisible}
+        />
+        <ScrollToTopButton />
     </main>
   )
 }
