@@ -11,7 +11,7 @@ export default function HeroSection() {
         <Reveal delay={0.04}>
           <div>
             <p className="text-[11px] tracking-[0.32em] uppercase text-ink/50">
-              Artist · Author · Creative Coach
+              Wanda Rogers | Artist · Author · Identity Architect
             </p>
 
             <h1 className="mt-5 text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight text-ink">
@@ -23,7 +23,7 @@ export default function HeroSection() {
 
             <p className="mt-8 text-muted text-lg md:text-xl leading-relaxed max-w-2xl">
               I&apos;m Wanda Rogers. I help creatives figure out exactly what&apos;s
-              getting in their way — and build a practice that&apos;s grounded,
+              getting in their way and build a practice that&apos;s grounded,
               sustainable, and fully their own.
             </p>
 

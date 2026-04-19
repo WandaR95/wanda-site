@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <h3 className="text-ink font-semibold mb-3">Wanda Rogers</h3>
           <p className="leading-relaxed">
-            Wanda Rogers is an artist, author, and founder of Mellow Mastermind —
+            Wanda Rogers is an artist, author, and founder of Mellow Mastermind,
             a creative framework designed to help people reconnect with their
             voice and build a creative life that feels clear, grounded, and real 
             through music, books, and the Mellow Mastermind framework.
