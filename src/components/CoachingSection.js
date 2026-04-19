@@ -15,51 +15,71 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
     >
       <Reveal>
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
-          <div className="rounded-[2rem] border border-black/10 bg-surface p-10 md:p-14 text-center shadow-xl">
-            <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
-              Support
-            </p>
+          <div className="rounded-[2rem] border border-black/10 bg-surface p-10 md:p-14 shadow-xl">
 
-            <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-ink">
-              For creatives ready to move differently.
-            </h2>
+            {/* Urgency badge */}
+            <div className="flex justify-center mb-8">
+              <span className="inline-flex items-center gap-2 rounded-full bg-peachTint border border-brandOrange/20 px-5 py-2 text-sm font-medium text-brandOrange">
+                ⚡ 5 founding spots · $997 · This rate closes when spots fill
+              </span>
+            </div>
 
-            <p className="mt-6 max-w-3xl mx-auto text-lg leading-relaxed text-muted">
-              If you know there’s more in you but keep running into overthinking,
-              self-doubt, or creative blocks, this work is designed to help you
-              reconnect with clarity, rebuild trust in your voice, and move with
-              more intention.
-            </p>
+            <div className="text-center">
+              <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
+                1:1 Coaching
+              </p>
 
-            <div className="mt-8 max-w-4xl mx-auto grid md:grid-cols-3 gap-4 text-left">
+              <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-ink">
+                Founding Client Rate —
+                <span className="block text-brandPurple mt-1">5 Spots Only</span>
+              </h2>
+
+              <p className="mt-3 text-xl font-medium text-muted">
+                $997 · 3 months · 1:1 coaching
+              </p>
+
+              <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
+                This is the founding client offer. You get full access to my creative
+                clarity framework, dedicated 1:1 sessions, and a customized 90-day
+                roadmap — at a rate that goes away once these 5 spots are filled. If
+                you&apos;ve been circling this work, this is the door.
+              </p>
+            </div>
+
+            {/* 3 benefit boxes */}
+            <div className="mt-10 max-w-4xl mx-auto grid md:grid-cols-3 gap-4 text-left">
               <Reveal delay={0.06}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-[#FCFAF7] p-5">
-                  <p className="font-semibold text-ink">Creative clarity</p>
-                  <p className="mt-2 text-sm text-muted">
-                    Understand what is actually blocking your momentum.
+                <div className="rounded-[1.25rem] border border-black/10 bg-lavenderTint p-6">
+                  <p className="font-semibold text-ink">1:1 Creative Clarity Sessions</p>
+                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                    Diagnose the real block. Build a practice around your actual life,
+                    not someone else&apos;s template.
                   </p>
                 </div>
               </Reveal>
 
               <Reveal delay={0.12}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-[#FCFAF7] p-5">
-                  <p className="font-semibold text-ink">Strategic support</p>
-                  <p className="mt-2 text-sm text-muted">
-                    Build a path forward that fits your real life.
+                <div className="rounded-[1.25rem] border border-black/10 bg-blueTint p-6">
+                  <p className="font-semibold text-ink">90-Day Custom Roadmap</p>
+                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                    Your archetype, your goals, your timeline. A clear path forward —
+                    not a generic plan.
                   </p>
                 </div>
               </Reveal>
 
               <Reveal delay={0.18}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-[#FCFAF7] p-5">
-                  <p className="font-semibold text-ink">Sustainable execution</p>
-                  <p className="mt-2 text-sm text-muted">
-                    Create without burning yourself out in the process.
+                <div className="rounded-[1.25rem] border border-black/10 bg-peachTint p-6">
+                  <p className="font-semibold text-ink">Direct Access</p>
+                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                    Async support between sessions. You don&apos;t have to wait until the
+                    next call to get unstuck.
                   </p>
                 </div>
               </Reveal>
             </div>
 
+            {/* CTAs */}
             <div className="mt-10 flex justify-center gap-4 flex-wrap">
               <a
                 href={calendlyLink}
@@ -67,16 +87,20 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
                 rel="noreferrer"
                 className="rounded-full bg-brandPurple text-white px-8 py-3.5 text-sm font-semibold hover:opacity-90 transition"
               >
-                Book a Call
+                Claim Your Spot →
               </a>
 
               <a
-                href="#lead-magnet"
+                href="#workbooks"
                 className="rounded-full border border-brandBlue/30 px-8 py-3.5 text-sm text-brandBlue hover:bg-blueTint transition"
               >
-                Start With the Creative Clarity Guide
+                Not ready? Start with a workbook →
               </a>
             </div>
+
+            <p className="mt-6 text-center text-xs text-ink/40">
+              The 30-minute call is free. The founding rate is not permanent.
+            </p>
           </div>
         </div>
       </Reveal>

@@ -11,33 +11,34 @@ export default function HeroSection() {
         <Reveal delay={0.04}>
           <div>
             <p className="text-[11px] tracking-[0.32em] uppercase text-ink/50">
-              Artist • Author • Creator of the Mellow Mastermind Framework
+              Artist · Author · Creative Coach
             </p>
 
             <h1 className="mt-5 text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight text-ink">
-              Build a creative life that feels
-              <span className="block text-brandPurple">clear, grounded, and real.</span>
+              You&apos;re not creatively broken.
+              <span className="block text-brandPurple mt-2">
+                You just have the wrong diagnosis.
+              </span>
             </h1>
 
             <p className="mt-8 text-muted text-lg md:text-xl leading-relaxed max-w-2xl">
-              I’m Wanda Rogers. I create music, write books, and build frameworks
-              for people who want to reconnect with their voice, move through
-              creative resistance, and build a life where creativity isn’t forced
-              and it just flows.
+              I&apos;m Wanda Rogers. I help creatives figure out exactly what&apos;s
+              getting in their way — and build a practice that&apos;s grounded,
+              sustainable, and fully their own.
             </p>
 
             <p className="mt-5 max-w-2xl leading-relaxed text-muted">
-              Through music, storytelling, and the Mellow Mastermind framework,
-              my work explores identity, resilience, self-trust, and what it means
-              to keep creating while becoming who you were meant to be.
+              Through music, memoir, and the Mellow Mastermind framework, I work
+              with the full picture: identity, resistance, self-trust, and the
+              specific pattern that&apos;s keeping you from the work you were meant to do.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#lead-magnet"
+                href="#quiz"
                 className="rounded-full bg-brandPurple text-white px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
               >
-                Get Your Free Creative Clarity Guide
+                Take the 60-Second Quiz →
               </a>
 
               <a
