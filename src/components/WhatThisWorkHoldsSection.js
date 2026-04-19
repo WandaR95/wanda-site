@@ -42,17 +42,17 @@ export default function WhatThisWorkHoldsSection({ revealUp }) {
           />
         </Reveal>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <div className="mt-12 grid md:grid-cols-3 gap-6 items-stretch">
           {pillars.map((pillar, index) => (
-            <Reveal key={pillar.title} delay={0.08 * (index + 1)}>
-              <div className="rounded-[1.75rem] border border-black/10 bg-surface p-7 shadow-sm">
+            <Reveal key={pillar.title} delay={0.08 * (index + 1)} className="h-full">
+              <div className="h-full flex flex-col rounded-[1.75rem] border border-black/10 bg-surface p-7 shadow-sm">
                 <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
                   {pillar.number}
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-ink">
                   {pillar.title}
                 </h3>
-                <p className="mt-4 text-muted leading-relaxed">
+                <p className="mt-4 text-muted leading-relaxed flex-1">
                   {pillar.body}
                 </p>
               </div>

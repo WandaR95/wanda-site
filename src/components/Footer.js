@@ -42,6 +42,36 @@ export default function Footer() {
             </li>
             <li>
               <a
+                href="https://www.tiktok.com/@wandarogers"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-ink"
+              >
+                TikTok
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@wandarogers"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-ink"
+              >
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://discord.gg/wandarogers"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-ink"
+              >
+                Discord
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.linkedin.com/in/wandarogers95"
                 target="_blank"
                 rel="noreferrer"

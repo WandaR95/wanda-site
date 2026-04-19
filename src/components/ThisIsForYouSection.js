@@ -28,10 +28,10 @@ export default function ThisIsForYouSection() {
               </p>
             </div>
 
-            <div className="mt-8 grid md:grid-cols-2 gap-4">
+            <div className="mt-8 grid md:grid-cols-2 gap-4 items-stretch">
               {items.map((item, index) => (
-                <Reveal key={item} delay={0.06 * (index + 1)}>
-                  <div className="rounded-[1.25rem] border border-black/10 bg-white p-5">
+                <Reveal key={item} delay={0.06 * (index + 1)} className="h-full">
+                  <div className="h-full flex items-center rounded-[1.25rem] border border-black/10 bg-white p-5">
                     <p className="text-muted leading-relaxed">{item}</p>
                   </div>
                 </Reveal>
