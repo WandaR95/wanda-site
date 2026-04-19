@@ -11,8 +11,8 @@ const pillars = [
   },
   {
     tint: "bg-blueTint",
-    label: "Microsoft",
-    body: "Working at Microsoft taught me how to move with intention inside complex systems, advocate for ideas that matter, and find space for genuine creative work within demanding environments. That experience sharpened how I think about clarity, strategy, and what it really takes to bring something meaningful to life.",
+    label: "Corporate America",
+    body: "Years inside Corporate America showed me what it looks like when institutions claim to value creativity while systematically grinding it down. I learned how to move through those systems with intention, protect my voice, and eventually build something outside of them.",
   },
   {
     tint: "bg-peachTint",

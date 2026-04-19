@@ -47,9 +47,9 @@ export default function MellowMastermindSection({ revealUp }) {
               </div>
             </Reveal>
 
-            <div className="grid md:grid-cols-3 gap-6 items-stretch">
-              <Reveal delay={0.08} className="h-full">
-                <div className="h-full flex flex-col rounded-[1.5rem] border border-black/10 bg-lavenderTint p-6">
+            <Reveal delay={0.08}>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="flex flex-col rounded-[1.5rem] border border-black/10 bg-lavenderTint p-6">
                   <h3 className="text-xl font-semibold text-ink">
                     Clarity
                   </h3>
@@ -58,10 +58,8 @@ export default function MellowMastermindSection({ revealUp }) {
                     creative process.
                   </p>
                 </div>
-              </Reveal>
 
-              <Reveal delay={0.14} className="h-full">
-                <div className="h-full flex flex-col rounded-[1.5rem] border border-black/10 bg-blueTint p-6">
+                <div className="flex flex-col rounded-[1.5rem] border border-black/10 bg-blueTint p-6">
                   <h3 className="text-xl font-semibold text-ink">
                     Self-Trust
                   </h3>
@@ -70,10 +68,8 @@ export default function MellowMastermindSection({ revealUp }) {
                     depends on external validation.
                   </p>
                 </div>
-              </Reveal>
 
-              <Reveal delay={0.2} className="h-full">
-                <div className="h-full flex flex-col rounded-[1.5rem] border border-black/10 bg-peachTint p-6">
+                <div className="flex flex-col rounded-[1.5rem] border border-black/10 bg-peachTint p-6">
                   <h3 className="text-xl font-semibold text-ink">
                     Sustainability
                   </h3>
@@ -82,8 +78,8 @@ export default function MellowMastermindSection({ revealUp }) {
                     exhausting it.
                   </p>
                 </div>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </Reveal>
