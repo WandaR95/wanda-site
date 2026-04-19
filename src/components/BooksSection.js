@@ -33,14 +33,13 @@ export default function BooksSection({ revealUp, featuredBooks }) {
                 rel="noreferrer"
                 className="group flex flex-col h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.25rem] shadow-xl">
-                  <Image
-                    src={book.image}
-                    alt={book.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Image
+                  src={book.image}
+                  alt={book.title}
+                  width={800}
+                  height={1100}
+                  className="w-full h-auto rounded-[1.25rem] shadow-xl"
+                />
 
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-xs uppercase tracking-[0.2em] text-ink/40">

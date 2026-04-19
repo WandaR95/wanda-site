@@ -91,79 +91,79 @@ export default function MusicSection({
           ))}
         </div>
 
-        <div className="mt-12 grid lg:grid-cols-3 gap-8 items-stretch">
-          <Reveal delay={0.08} className="h-full">
-            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 shadow-sm flex flex-col">
-              <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
+        <div className="mt-12 grid lg:grid-cols-[1.6fr_1fr] gap-8 items-start">
+
+          {/* Now Selected — featured card */}
+          <Reveal delay={0.08}>
+            <div className="rounded-[2rem] border border-brandPurple/20 bg-gradient-to-br from-lavenderTint via-surface to-blueTint/40 p-8 md:p-10 shadow-xl flex flex-col min-h-[380px]">
+              <p className="text-[11px] tracking-[0.32em] uppercase text-brandPurple/60">
                 Now Selected
               </p>
 
-              <h3 className="mt-3 text-3xl font-semibold text-ink">
-                {currentTrack.title}
-              </h3>
+              <div className="flex-1 flex flex-col justify-center text-center py-8">
+                <p className="text-sm text-muted">{currentTrack.album}</p>
+                <h3 className="mt-3 text-4xl md:text-5xl font-semibold text-ink leading-tight">
+                  {currentTrack.title}
+                </h3>
+                <p className="mt-5 text-lg italic text-ink/60 leading-relaxed max-w-sm mx-auto">
+                  {currentTrack.vibe}
+                </p>
+              </div>
 
-              <p className="mt-2 text-muted">{currentTrack.album}</p>
-
-              <p className="mt-5 text-lg italic text-ink/70 flex-1">
-                {currentTrack.vibe}
-              </p>
-
-              <div className="mt-8">
+              <div className="flex justify-center">
                 <button
                   onClick={() => playTrack(currentTrackIndex)}
-                  className="rounded-full bg-brandPurple px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                  className="rounded-full bg-brandPurple px-8 py-3.5 text-sm font-semibold text-white transition hover:opacity-90 shadow-lg"
                 >
-                  {isPlaying ? "Pause Track" : "Play Track"}
+                  {isPlaying ? "⏸  Pause" : "▶  Play Track"}
                 </button>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.12} className="h-full">
-            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm flex flex-col">
-              <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-5">
-                <Image
-                  src="/music/some-experience-necessary/cover.jpg"
-                  alt="Some Experience Necessary cover"
-                  fill
-                  className="object-cover"
-                />
+          {/* Albums — stacked */}
+          <div className="flex flex-col gap-6">
+            <Reveal delay={0.14}>
+              <div className="rounded-[1.75rem] border border-black/10 bg-surface p-5 shadow-sm flex flex-col">
+                <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-4">
+                  <Image
+                    src="/music/some-experience-necessary/cover.jpg"
+                    alt="Some Experience Necessary cover"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-xs uppercase tracking-[0.2em] text-ink/40">Album</p>
+                <h3 className="mt-1.5 text-lg font-semibold text-ink">
+                  Some Experience Necessary
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  Exploration, feeling, softness, and the stretch that comes with becoming.
+                </p>
               </div>
-              <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
-                Album
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold text-ink">
-                Some Experience Necessary
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted flex-1">
-                Exploration, feeling, softness, and the stretch that comes with
-                becoming.
-              </p>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          <Reveal delay={0.18} className="h-full">
-            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm flex flex-col">
-              <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-5">
-                <Image
-                  src="/music/im-not-a-rapper/cover.jpg"
-                  alt="I'm Not a Rapper cover"
-                  fill
-                  className="object-cover"
-                />
+            <Reveal delay={0.2}>
+              <div className="rounded-[1.75rem] border border-black/10 bg-surface p-5 shadow-sm flex flex-col">
+                <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-4">
+                  <Image
+                    src="/music/im-not-a-rapper/cover.jpg"
+                    alt="I'm Not a Rapper cover"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-xs uppercase tracking-[0.2em] text-ink/40">Album</p>
+                <h3 className="mt-1.5 text-lg font-semibold text-ink">
+                  I&apos;m Not a Rapper
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  Voice, contradiction, confidence, edge, and the freedom to define yourself on your own terms.
+                </p>
               </div>
-              <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
-                Album
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold text-ink">
-                I&apos;m Not a Rapper
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted flex-1">
-                Voice, contradiction, confidence, edge, and the freedom to define
-                yourself on your own terms.
-              </p>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
+
         </div>
       </div>
     </motion.section>
