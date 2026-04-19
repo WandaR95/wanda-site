@@ -12,12 +12,12 @@ const pillars = [
   {
     tint: "bg-blueTint",
     label: "Microsoft",
-    body: "I worked at Microsoft, where I saw firsthand how institutions can suffocate the exact creativity they claim to value. That friction between corporate pressure and personal voice became part of the blueprint for this work.",
+    body: "Working at Microsoft taught me how to move with intention inside complex systems, advocate for ideas that matter, and find space for genuine creative work within demanding environments. That experience sharpened how I think about clarity, strategy, and what it really takes to bring something meaningful to life.",
   },
   {
     tint: "bg-peachTint",
     label: "Music",
-    body: "I make music: experimental, genre-bending, and personal. It's where I process everything I can't say in writing. Two albums. Dozens of tracks. All of it honest.",
+    body: "Music is where I process everything I can't put into regular words. It's a form of expression when my feelings need a voice and an outlet. Two albums. Dozens of tracks. All of it honest.",
   },
   {
     tint: "bg-lavenderTint",
@@ -74,14 +74,14 @@ export default function AboutSection({ revealUp }) {
               </div>
             </Reveal>
 
-            <div className="space-y-5">
+            <div className="grid md:grid-cols-2 gap-5 items-stretch">
               {pillars.map((p, i) => (
-                <Reveal key={p.label} delay={0.06 * (i + 1)}>
-                  <div className={`rounded-[1.75rem] border border-black/10 ${p.tint} p-7`}>
+                <Reveal key={p.label} delay={0.06 * (i + 1)} className="h-full">
+                  <div className={`h-full flex flex-col rounded-[1.75rem] border border-black/10 ${p.tint} p-7`}>
                     <p className="text-[11px] tracking-[0.24em] uppercase text-ink/50 mb-3">
                       {p.label}
                     </p>
-                    <p className="text-muted leading-relaxed">{p.body}</p>
+                    <p className="text-muted leading-relaxed flex-1">{p.body}</p>
                   </div>
                 </Reveal>
               ))}

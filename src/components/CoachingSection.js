@@ -47,31 +47,31 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
             </div>
 
             {/* 3 benefit boxes */}
-            <div className="mt-10 max-w-4xl mx-auto grid md:grid-cols-3 gap-4 text-left">
-              <Reveal delay={0.06}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-lavenderTint p-6">
+            <div className="mt-10 max-w-4xl mx-auto grid md:grid-cols-3 gap-4 text-left items-stretch">
+              <Reveal delay={0.06} className="h-full">
+                <div className="h-full flex flex-col rounded-[1.25rem] border border-black/10 bg-lavenderTint p-6">
                   <p className="font-semibold text-ink">1:1 Creative Clarity Sessions</p>
-                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                  <p className="mt-2 text-sm text-muted leading-relaxed flex-1">
                     Diagnose the real block. Build a practice around your actual life,
                     not someone else&apos;s template.
                   </p>
                 </div>
               </Reveal>
 
-              <Reveal delay={0.12}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-blueTint p-6">
+              <Reveal delay={0.12} className="h-full">
+                <div className="h-full flex flex-col rounded-[1.25rem] border border-black/10 bg-blueTint p-6">
                   <p className="font-semibold text-ink">90-Day Custom Roadmap</p>
-                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                  <p className="mt-2 text-sm text-muted leading-relaxed flex-1">
                     Your archetype, your goals, your timeline. A clear path forward,
                     not a generic plan.
                   </p>
                 </div>
               </Reveal>
 
-              <Reveal delay={0.18}>
-                <div className="rounded-[1.25rem] border border-black/10 bg-peachTint p-6">
+              <Reveal delay={0.18} className="h-full">
+                <div className="h-full flex flex-col rounded-[1.25rem] border border-black/10 bg-peachTint p-6">
                   <p className="font-semibold text-ink">Direct Access</p>
-                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                  <p className="mt-2 text-sm text-muted leading-relaxed flex-1">
                     Async support between sessions. You don&apos;t have to wait until the
                     next call to get unstuck.
                   </p>
