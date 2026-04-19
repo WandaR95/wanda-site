@@ -20,26 +20,27 @@ export default function BooksSection({ revealUp, featuredBooks }) {
           <SectionIntro
             eyebrow="Books"
             title="For the inner work behind the creative work."
-            body="These books explore the emotional and psychological layers behind creativity — identity, resistance, healing, ambition, and the courage it takes to keep becoming who you are meant to be."
+            body="These books explore the emotional and psychological layers behind creativity: identity, resistance, healing, ambition, and the courage it takes to keep becoming who you are meant to be."
           />
         </Reveal>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+        <div className="mt-12 grid md:grid-cols-2 gap-8 items-stretch">
           {featuredBooks.map((book, index) => (
-            <Reveal key={book.title} delay={0.08 * (index + 1)}>
+            <Reveal key={book.title} delay={0.08 * (index + 1)} className="h-full">
               <a
                 href={book.link}
                 target="_blank"
                 rel="noreferrer"
-                className="group block rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm"
+                className="group flex flex-col h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm"
               >
-                <Image
-                  src={book.image}
-                  alt={book.title}
-                  width={800}
-                  height={1000}
-                  className="w-full rounded-[1.25rem] shadow-xl"
-                />
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.25rem] shadow-xl">
+                  <Image
+                    src={book.image}
+                    alt={book.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-xs uppercase tracking-[0.2em] text-ink/40">
@@ -54,7 +55,7 @@ export default function BooksSection({ revealUp, featuredBooks }) {
                   {book.title}
                 </h3>
 
-                <p className="mt-4 text-muted leading-relaxed">
+                <p className="mt-4 text-muted leading-relaxed flex-1">
                   {book.description}
                 </p>
 

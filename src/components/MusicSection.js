@@ -91,9 +91,9 @@ export default function MusicSection({
           ))}
         </div>
 
-        <div className="mt-12 grid lg:grid-cols-[1.05fr_0.95fr_0.95fr] gap-8 items-start">
-          <Reveal delay={0.08}>
-            <div className="rounded-[1.75rem] border border-black/10 bg-surface p-7 shadow-sm">
+        <div className="mt-12 grid lg:grid-cols-3 gap-8 items-stretch">
+          <Reveal delay={0.08} className="h-full">
+            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 shadow-sm flex flex-col">
               <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
                 Now Selected
               </p>
@@ -104,66 +104,61 @@ export default function MusicSection({
 
               <p className="mt-2 text-muted">{currentTrack.album}</p>
 
-              <p className="mt-5 text-lg italic text-ink/70">
+              <p className="mt-5 text-lg italic text-ink/70 flex-1">
                 {currentTrack.vibe}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8">
                 <button
                   onClick={() => playTrack(currentTrackIndex)}
                   className="rounded-full bg-brandPurple px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
                   {isPlaying ? "Pause Track" : "Play Track"}
                 </button>
-
-                <a
-                  href="#lead-magnet"
-                  className="rounded-full border border-brandOrange/30 px-6 py-3 text-sm font-semibold text-brandOrange hover:bg-peachTint transition"
-                >
-                  Unlock a Free Song
-                </a>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm">
-              <Image
-                src="/music/some-experience-necessary/cover.jpg"
-                alt="Some Experience Necessary cover"
-                width={700}
-                height={700}
-                className="w-full rounded-[1.25rem] mb-5"
-              />
+          <Reveal delay={0.12} className="h-full">
+            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm flex flex-col">
+              <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-5">
+                <Image
+                  src="/music/some-experience-necessary/cover.jpg"
+                  alt="Some Experience Necessary cover"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
                 Album
               </p>
               <h3 className="mt-2 text-2xl font-semibold text-ink">
                 Some Experience Necessary
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 text-sm leading-relaxed text-muted flex-1">
                 Exploration, feeling, softness, and the stretch that comes with
                 becoming.
               </p>
             </div>
           </Reveal>
 
-          <Reveal delay={0.18}>
-            <div className="rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm">
-              <Image
-                src="/music/im-not-a-rapper/cover.jpg"
-                alt="I'm Not a Rapper cover"
-                width={700}
-                height={700}
-                className="w-full rounded-[1.25rem] mb-5"
-              />
+          <Reveal delay={0.18} className="h-full">
+            <div className="h-full rounded-[1.75rem] border border-black/10 bg-surface p-6 shadow-sm flex flex-col">
+              <div className="relative aspect-square w-full overflow-hidden rounded-[1.25rem] mb-5">
+                <Image
+                  src="/music/im-not-a-rapper/cover.jpg"
+                  alt="I'm Not a Rapper cover"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <p className="text-sm uppercase tracking-[0.2em] text-ink/40">
                 Album
               </p>
               <h3 className="mt-2 text-2xl font-semibold text-ink">
                 I&apos;m Not a Rapper
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 text-sm leading-relaxed text-muted flex-1">
                 Voice, contradiction, confidence, edge, and the freedom to define
                 yourself on your own terms.
               </p>

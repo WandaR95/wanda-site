@@ -11,7 +11,7 @@ const ARCHETYPES = {
     tint: "lavenderTint",
     tagline: "Your brain never stops processing.",
     description:
-      "You can see every angle of a project before you start — which means you rarely start. The creative block isn't a lack of ideas. It's a traffic jam of too many. You need less information and more permission to move before you're ready.",
+      "You can see every angle of a project before you start, which means you rarely start. The creative block isn't a lack of ideas. It's a traffic jam of too many. You need less information and more permission to move before you're ready.",
     resource: "The Overthinking Workbook",
   },
   Perfectionist: {
@@ -27,9 +27,9 @@ const ARCHETYPES = {
     emoji: "🌊",
     color: "brandBlue",
     tint: "blueTint",
-    tagline: "You're not unfocused — you're over-committed.",
+    tagline: "You're not unfocused. You're over-committed.",
     description:
-      "Life keeps interrupting your creative time, and you've started to wonder if that's on purpose. The block isn't focus. It's boundaries — and permission to prioritize your own work without explaining yourself to anyone.",
+      "Life keeps interrupting your creative time, and you've started to wonder if that's on purpose. The block isn't focus. It's boundaries: permission to prioritize your own work without explaining yourself to anyone.",
     resource: "The Focus Fix",
   },
   "Idea Hopper": {
@@ -38,7 +38,7 @@ const ARCHETYPES = {
     tint: "peachTint",
     tagline: "You're the most creative person in every room.",
     description:
-      "You have more ideas than most people have in a lifetime. The block is commitment — staying long enough to finish something, even when something new and shiny is already calling. Your greatest asset becomes your biggest saboteur.",
+      "You have more ideas than most people have in a lifetime. The block is commitment: staying long enough to finish something, even when something new and shiny is already calling. Your greatest asset becomes your biggest saboteur.",
     resource: "The Idea Graveyard",
   },
   Burnout: {
@@ -47,7 +47,7 @@ const ARCHETYPES = {
     tint: "lavenderTint",
     tagline: "You used to have energy for this.",
     description:
-      "Now even thinking about creating feels like lifting something too heavy. This isn't laziness — it's depletion. It requires a different kind of work than pushing harder. Recovery is not a detour from creativity. It is the work.",
+      "Now even thinking about creating feels like lifting something too heavy. This isn't laziness. It's depletion. It requires a different kind of work than pushing harder. Recovery is not a detour from creativity. It is the work.",
     resource: "The Burnout Recovery Guide",
   },
 }
@@ -66,9 +66,9 @@ const QUESTIONS = [
   {
     question: "How do you feel about your unfinished projects?",
     answers: [
-      { text: "They haunt me — I keep going back to fix them", archetype: "Perfectionist" },
+      { text: "They haunt me; I keep going back to fix them", archetype: "Perfectionist" },
       { text: "I have a whole graveyard of them", archetype: "Idea Hopper" },
-      { text: "I'm not sure why I stopped — life just happened", archetype: "Distracted" },
+      { text: "I'm not sure why I stopped. Life just happened.", archetype: "Distracted" },
       { text: "I analyzed them to death until I lost interest", archetype: "Overthinker" },
       { text: "Even thinking about them drains me", archetype: "Burnout" },
     ],
@@ -76,11 +76,11 @@ const QUESTIONS = [
   {
     question: "What does \"being blocked\" feel like for you?",
     answers: [
-      { text: "A wall — I can't move forward until it's perfect", archetype: "Perfectionist" },
-      { text: "A fog — I can't find the thread I was pulling", archetype: "Distracted" },
-      { text: "An endless loop — I think but I don't make", archetype: "Overthinker" },
-      { text: "A total shutdown — my body just refuses", archetype: "Burnout" },
-      { text: "A distraction — I'd rather start something fresh", archetype: "Idea Hopper" },
+      { text: "A wall. I can't move forward until it's perfect.", archetype: "Perfectionist" },
+      { text: "A fog. I can't find the thread I was pulling.", archetype: "Distracted" },
+      { text: "An endless loop. I think but never make.", archetype: "Overthinker" },
+      { text: "A total shutdown. My body just refuses.", archetype: "Burnout" },
+      { text: "A distraction. I'd rather start something fresh.", archetype: "Idea Hopper" },
     ],
   },
   {
@@ -96,7 +96,7 @@ const QUESTIONS = [
   {
     question: "The last time you felt truly creative, what made it work?",
     answers: [
-      { text: "It was spontaneous — no pressure, no stakes", archetype: "Perfectionist" },
+      { text: "It was spontaneous. No pressure, no stakes.", archetype: "Perfectionist" },
       { text: "I had accountability or a clear deadline", archetype: "Distracted" },
       { text: "I was rested and had uninterrupted space", archetype: "Burnout" },
       { text: "I had a clear direction to follow", archetype: "Overthinker" },
@@ -305,7 +305,7 @@ export default function QuizSection({ revealUp }) {
                     </h4>
                     <p className="text-sm text-muted mb-5 leading-relaxed">
                       I'll send you a personalized guide built specifically for the{" "}
-                      <strong>{archetype}</strong> — including <em>{info.resource}</em> and
+                      <strong>{archetype}</strong>, including <em>{info.resource}</em> and
                       next steps tailored to how you actually work.
                     </p>
 
@@ -366,7 +366,7 @@ export default function QuizSection({ revealUp }) {
                     <p className="text-2xl mb-2">✅</p>
                     <p className="font-semibold text-ink">You're in, {firstName}.</p>
                     <p className="mt-2 text-sm text-muted leading-relaxed">
-                      Check your inbox for your personalized {archetype} guide. While you wait —
+                      Check your inbox for your personalized {archetype} guide. While you wait,
                       keep scrolling to find the workbook built for you.
                     </p>
                   </div>

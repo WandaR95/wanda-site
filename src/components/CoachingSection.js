@@ -30,7 +30,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
               </p>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-ink">
-                Founding Client Rate —
+                Founding Client Rate:
                 <span className="block text-brandPurple mt-1">5 Spots Only</span>
               </h2>
 
@@ -41,7 +41,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
                 This is the founding client offer. You get full access to my creative
                 clarity framework, dedicated 1:1 sessions, and a customized 90-day
-                roadmap — at a rate that goes away once these 5 spots are filled. If
+                roadmap, at a rate that goes away once these 5 spots are filled. If
                 you&apos;ve been circling this work, this is the door.
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
                 <div className="rounded-[1.25rem] border border-black/10 bg-blueTint p-6">
                   <p className="font-semibold text-ink">90-Day Custom Roadmap</p>
                   <p className="mt-2 text-sm text-muted leading-relaxed">
-                    Your archetype, your goals, your timeline. A clear path forward —
+                    Your archetype, your goals, your timeline. A clear path forward,
                     not a generic plan.
                   </p>
                 </div>

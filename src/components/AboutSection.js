@@ -7,22 +7,22 @@ const pillars = [
   {
     tint: "bg-lavenderTint",
     label: "Capoeira",
-    body: "I've been training Capoeira for over a decade — a martial art where you learn to read people, adapt mid-movement, and find power in flow. It taught me that creativity isn't about force. It's about timing, presence, and trusting your body to know before your brain catches up.",
+    body: "I've been training Capoeira for over a decade. It's a martial art where you learn to read people, adapt mid-movement, and find power in flow. It taught me that creativity isn't about force. It's about timing, presence, and trusting your body to know before your brain catches up.",
   },
   {
     tint: "bg-blueTint",
     label: "Microsoft",
-    body: "I spent years leading teams at Microsoft, where I learned firsthand how organizations stifle the exact creativity they say they want. That tension — between institutional pressure and personal voice — became the blueprint for this work.",
+    body: "I worked at Microsoft, where I saw firsthand how institutions can suffocate the exact creativity they claim to value. That friction between corporate pressure and personal voice became part of the blueprint for this work.",
   },
   {
     tint: "bg-peachTint",
     label: "Music",
-    body: "I make music as Mars — experimental, genre-bending, and personal. It's where I process everything I can't say in a meeting or a book. Two albums. Dozens of tracks. All of it honest.",
+    body: "I make music: experimental, genre-bending, and personal. It's where I process everything I can't say in writing. Two albums. Dozens of tracks. All of it honest.",
   },
   {
     tint: "bg-lavenderTint",
     label: "Memoir",
-    body: "My book The First to Make It This Far is the story of becoming someone no one in your family has been before — and what that costs you, and what it gives you.",
+    body: "My book The First to Make It This Far is the story of becoming someone no one in your family has been before. What it costs you, and what it gives you.",
   },
 ]
 
@@ -53,8 +53,8 @@ export default function AboutSection({ revealUp }) {
 
                 <p className="mt-6 text-muted leading-relaxed">
                   I&apos;m an artist, author, and founder of Mellow Mastermind. My work
-                  lives at the intersection of creativity, identity, and personal growth —
-                  and it&apos;s shaped by everything I&apos;ve lived, not just what I&apos;ve studied.
+                  lives at the intersection of creativity, identity, and personal growth.
+                  It&apos;s shaped by everything I&apos;ve lived, not just what I&apos;ve studied.
                 </p>
 
                 <Reveal delay={0.14}>

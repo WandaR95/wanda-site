@@ -3,7 +3,7 @@ import "./globals.css"
 export const metadata = {
   title: "Wanda Rogers | Artist, Author, Founder of Mellow Mastermind",
   description:
-    "Wanda Rogers is an artist, author, and founder of Mellow Mastermind — a creative framework for clarity, self-trust, and sustainable expression.",
+    "Wanda Rogers is an artist, author, and founder of Mellow Mastermind, a creative framework for clarity, self-trust, and sustainable expression. She helps creatives break through overthinking, build clarity, and create with more consistency through books, music, and transformational tools.",
   icons: {
     icon: "/favicon.png",
   },

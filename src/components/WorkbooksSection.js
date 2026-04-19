@@ -20,7 +20,7 @@ const workbooks = [
     tint: "bg-blueTint",
     accentText: "text-brandBlue",
     description:
-      "Let go of the standard that's keeping you stuck. Exercises for building \"good enough\" momentum — and learning that finished beats flawless.",
+      "Let go of the standard that's keeping you stuck. Exercises for building \"good enough\" momentum. Finished beats flawless.",
     href: "#",
   },
   {
@@ -29,7 +29,7 @@ const workbooks = [
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
     description:
-      "For creatives who can't stay in the chair. Practical systems for the distracted maker — including boundary-setting, time-blocking, and reclaiming your own creative hours.",
+      "For creatives who can't stay in the chair. Practical systems for the distracted maker: boundary-setting, time-blocking, and reclaiming your own creative hours.",
     href: "#",
   },
   {
@@ -38,7 +38,7 @@ const workbooks = [
     tint: "bg-lavenderTint",
     accentText: "text-brandPurple",
     description:
-      "Finish what you started. A structured excavation of your abandoned projects — finding out which ones still matter and building the commitment to see them through.",
+      "Finish what you started. A structured excavation of your abandoned projects: finding out which ones still matter and building the commitment to see them through.",
     href: "#",
   },
   {
@@ -47,7 +47,7 @@ const workbooks = [
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
     description:
-      "Reignite slowly, sustainably. Rest is part of the process — not a detour from it. A step-by-step guide to rebuilding creative energy from the ground up.",
+      "Reignite slowly, sustainably. Rest is part of the process, not a detour from it. A step-by-step guide to rebuilding creative energy from the ground up.",
     href: "#",
   },
 ]
@@ -67,7 +67,7 @@ export default function WorkbooksSection({ revealUp }) {
           <SectionIntro
             eyebrow="Workbooks"
             title="Go deeper on your own terms."
-            body="Each workbook targets a specific creative block. Download, work through it, keep it. $27 each — or get all five plus the full Companion guide and save."
+            body="Each workbook targets a specific creative block. Download, work through it, keep it. $27 each, or get all five plus the full Companion guide and save."
           />
         </Reveal>
 
@@ -117,7 +117,7 @@ export default function WorkbooksSection({ revealUp }) {
                   The Creative Clarity Companion
                 </h3>
                 <p className="mt-4 text-lg text-muted leading-relaxed max-w-2xl">
-                  All 5 workbooks plus a complete 12-week guided program — structured
+                  All 5 workbooks plus a complete 12-week guided program, structured
                   by archetype, paced for real life. One price. One process. Everything
                   you need to move from blocked to building.
                 </p>
