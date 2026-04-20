@@ -24,19 +24,20 @@ export default function LeadMagnetSection({ revealUp }) {
                 </p>
 
                 <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
-                  Get clear. Get moving. Create with less friction.
+                  The 15-Minute Creative Reset
                 </h2>
 
                 <p className="mt-6 text-lg leading-relaxed text-muted max-w-2xl">
-                  Creative blocks rarely mean you’ve lost your talent. More often,
-                  they mean something inside you needs clarity, space, or a
-                  different way forward.
+                  Stop overthinking. Start creating. This science-backed reset is
+                  designed to help you break through creative blocks, rebuild
+                  momentum, and move with more clarity in less time than it takes
+                  to scroll.
                 </p>
 
                 <p className="mt-5 text-lg leading-relaxed text-muted max-w-2xl">
-                  This free resource is designed to help you reconnect with your
-                  voice, reduce creative friction, and regain momentum without
-                  forcing inspiration.
+                  Based on <em>Why You&apos;re Creatively Blocked</em>, this free
+                  guide gives you a powerful first step toward deeper clarity,
+                  stronger consistency, and a more sustainable creative process.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted">
@@ -44,10 +45,10 @@ export default function LeadMagnetSection({ revealUp }) {
                     Creative clarity
                   </span>
                   <span className="rounded-full bg-blueTint px-4 py-2">
-                    Gentle momentum
+                    15-minute reset
                   </span>
                   <span className="rounded-full bg-peachTint px-4 py-2">
-                    Self-trust tools
+                    Momentum-building tools
                   </span>
                 </div>
               </div>
@@ -56,11 +57,12 @@ export default function LeadMagnetSection({ revealUp }) {
             <Reveal delay={0.12}>
               <div className="rounded-[1.5rem] border border-black/10 bg-[#FCFAF7] p-6 md:p-7">
                 <h3 className="text-2xl font-semibold text-ink">
-                  Get your FREE Mellow Mastermind Creative Clarity Guide
+                  Get unstuck in 15 minutes
                 </h3>
 
                 <p className="mt-3 text-muted leading-relaxed">
-                  Enter your details below and I’ll send it to you.
+                  Enter your details below to get instant access to The 15-Minute
+                  Creative Reset. Get clear. Get moving. Create with less friction.
                 </p>
 
                 <div className="mt-6">

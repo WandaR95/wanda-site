@@ -76,10 +76,11 @@ export default function LeadMagnetForm() {
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           placeholder="First Name"
-          className={`w-full rounded-2xl border bg-white px-4 py-3 text-ink outline-none transition ${errors.firstName
+          className={`w-full rounded-2xl border bg-white px-4 py-3 text-ink outline-none transition ${
+            errors.firstName
               ? "border-red-500"
               : "border-black/10 focus:border-brandPurple/40"
-            }`}
+          }`}
         />
         {errors.firstName ? (
           <p className="mt-2 text-sm text-red-600">{errors.firstName}</p>
@@ -92,10 +93,11 @@ export default function LeadMagnetForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
-          className={`w-full rounded-2xl border bg-white px-4 py-3 text-ink outline-none transition ${errors.email
+          className={`w-full rounded-2xl border bg-white px-4 py-3 text-ink outline-none transition ${
+            errors.email
               ? "border-red-500"
               : "border-black/10 focus:border-brandPurple/40"
-            }`}
+          }`}
         />
         {errors.email ? (
           <p className="mt-2 text-sm text-red-600">{errors.email}</p>
@@ -103,7 +105,7 @@ export default function LeadMagnetForm() {
       </div>
 
       <p className="text-sm text-muted">
-        You can unsubscribe anytime. Helpful updates only! No noise.
+        Helpful updates only. No spam, no noise.
       </p>
 
       {formMessage ? (
@@ -111,19 +113,17 @@ export default function LeadMagnetForm() {
       ) : null}
 
       <div className="mt-6 flex flex-wrap gap-3 text-sm">
-
         <span className="rounded-full bg-purple-100 px-3 py-1 text-purple-700">
-          Creative clarity exercises
+          Creative clarity
         </span>
 
         <span className="rounded-full bg-blue-100 px-3 py-1 text-blue-700">
-          Early access to new music
+          Momentum-building tools
         </span>
 
         <span className="rounded-full bg-orange-100 px-3 py-1 text-orange-700">
-          Tools to unblock your creativity
+          Based on the book
         </span>
-
       </div>
 
       <button
@@ -131,7 +131,7 @@ export default function LeadMagnetForm() {
         disabled={submitting}
         className="w-full rounded-2xl bg-brandPurple px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {submitting ? "Submitting..." : "Get Your Creative Clarity Guide!"}
+        {submitting ? "Submitting..." : "Get Unstuck in 15 Minutes"}
       </button>
     </form>
   )
