@@ -181,10 +181,6 @@ export default function MusicSection({
                     </p>
                   </div>
 
-                  {/* Play arrow */}
-                  <span className="shrink-0 text-ink/25 group-hover:text-brandPurple transition-colors duration-200 text-lg pr-1">
-                    ▶
-                  </span>
                 </button>
               </Reveal>
             ))}
