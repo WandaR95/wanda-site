@@ -82,7 +82,6 @@ export default function FloatingPlayer({
           ✕
         </button>
 
-        <audio ref={audioRef} src={currentTrack.src} />
       </div>
     </div>
   )
