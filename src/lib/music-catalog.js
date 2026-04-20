@@ -13,7 +13,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/bars-for-no-reason.mp3",
         fullPath: "im-not-a-rapper/bars-for-no-reason.mp3",
         previewStart: 45,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "Rapid-fire lyricism with a shifting flow that keeps you locked in.",
       },
       {
@@ -24,7 +24,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/boss-moves.mp3",
         fullPath: "im-not-a-rapper/boss-moves.mp3",
         previewStart: 20,
-        previewDuration: 60,
+        previewDuration: 35,
         vibe: "High-energy confidence with a powerful bass-driven presence.",
       },
       {
@@ -35,7 +35,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/bright-lights.mp3",
         fullPath: "im-not-a-rapper/bright-lights.mp3",
         previewStart: 35,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "A rising build into an explosive, unforgettable hook.",
       },
       {
@@ -57,7 +57,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/built-for-this.mp3",
         fullPath: "im-not-a-rapper/built-for-this.mp3",
         previewStart: 0,
-        previewDuration: 60,
+        previewDuration: 40,
         vibe: "Pure adrenaline and unstoppable momentum.",
       },
       {
@@ -90,7 +90,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/i-like-it.mp3",
         fullPath: "im-not-a-rapper/i-like-it.mp3",
         previewStart: 15,
-        previewDuration: 60,
+        previewDuration: 40,
         vibe: "Catchy, flirty, and instantly memorable.",
       },
       {
@@ -101,7 +101,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/mic-check.mp3",
         fullPath: "im-not-a-rapper/mic-check.mp3",
         previewStart: 30,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "Smooth groove with evolving rhythm.",
       },
       {
@@ -112,7 +112,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/stereo-love.mp3",
         fullPath: "im-not-a-rapper/stereo-love.mp3",
         previewStart: 45,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "Melodic build with a signature sonic hook.",
       },
       {
@@ -123,7 +123,7 @@ export const ALBUMS = [
         previewSrc: "/music/im-not-a-rapper/west-coast-riches.mp3",
         fullPath: "im-not-a-rapper/west-coast-riches.mp3",
         previewStart: 60,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "Smooth, melodic West Coast energy.",
       },
     ],
@@ -142,7 +142,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/i-see-you.mp3",
         fullPath: "some-experience-necessary/i-see-you.mp3",
         previewStart: 45,
-        previewDuration: 60,
+        previewDuration: 50,
         vibe: "Melodic, smooth, and emotionally layered.",
       },
       {
@@ -153,7 +153,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/im-ready.mp3",
         fullPath: "some-experience-necessary/im-ready.mp3",
         previewStart: 30,
-        previewDuration: 60,
+        previewDuration: 40,
         vibe: "Tension building into a powerful release.",
       },
       {
@@ -164,7 +164,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/in-charge.mp3",
         fullPath: "some-experience-necessary/in-charge.mp3",
         previewStart: 15,
-        previewDuration: 60,
+        previewDuration: 45,
         vibe: "Assertive, confident, and commanding.",
       },
       {
@@ -186,7 +186,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/lil-bit.mp3",
         fullPath: "some-experience-necessary/lil-bit.mp3",
         previewStart: 0,
-        previewDuration: 60,
+        previewDuration: 35,
         vibe: "Upbeat, catchy, and instantly engaging.",
       },
       {
@@ -208,7 +208,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/on-the-cool.mp3",
         fullPath: "some-experience-necessary/on-the-cool.mp3",
         previewStart: 50,
-        previewDuration: 60,
+        previewDuration: 50,
         vibe: "Smooth, laid-back, and rhythmically fluid.",
       },
       {
@@ -230,7 +230,7 @@ export const ALBUMS = [
         previewSrc: "/music/some-experience-necessary/party-maniac.mp3",
         fullPath: "some-experience-necessary/party-maniac.mp3",
         previewStart: 50,
-        previewDuration: 60,
+        previewDuration: 40,
         vibe: "High-energy, fun, and unpredictable.",
       },
       {
