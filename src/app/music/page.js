@@ -288,6 +288,38 @@ export default function MusicStorePage() {
             </div>
           </aside>
         </div>
+
+        {/* Cross-references */}
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          <div className="rounded-[1.75rem] bg-lavenderTint/40 p-8 flex flex-col gap-5">
+            <div className="flex gap-3">
+              <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0">
+                <Image src="/books/creatively-blocked.jpg" alt="Why You're Creatively Blocked" fill className="object-cover" sizes="64px" />
+              </div>
+              <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0">
+                <Image src="/books/first-to-make-it.jpg" alt="The First to Make It This Far" fill className="object-cover" sizes="64px" />
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">The inner work is the real work.</h3>
+              <p className="mt-2 text-muted text-sm leading-relaxed">Two books on creativity and identity. Written from lived experience.</p>
+            </div>
+            <Link href="/books" className="self-start rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition">
+              Browse the Books &rarr;
+            </Link>
+          </div>
+
+          <div className="rounded-[1.75rem] bg-peachTint/40 p-8 flex flex-col gap-5">
+            <div>
+              <h3 className="text-xl font-semibold">Go deeper with workbooks.</h3>
+              <p className="mt-2 text-muted text-sm leading-relaxed">Five targeted workbooks plus a 12-week companion guide. $27 each or $97 for everything.</p>
+            </div>
+            <Link href="/workbooks" className="self-start rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition">
+              Browse the Workbooks &rarr;
+            </Link>
+          </div>
+        </div>
+
       </section>
       <ScrollToTopButton />
     </main>
