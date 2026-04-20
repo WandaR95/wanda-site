@@ -1,12 +1,14 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import SectionIntro from "./SectionIntro"
 import Reveal from "./Reveal"
 
 const albums = [
   {
+    slug: "some-experience-necessary",
     src: "/music/some-experience-necessary/cover.jpg",
     alt: "Some Experience Necessary cover",
     title: "Some Experience Necessary",
@@ -14,6 +16,7 @@ const albums = [
     trackIndex: 0,
   },
   {
+    slug: "im-not-a-rapper",
     src: "/music/im-not-a-rapper/cover.jpg",
     alt: "I\u2019m Not a Rapper cover",
     title: "I\u2019m Not a Rapper",
@@ -164,8 +167,8 @@ export default function MusicSection({
           <div className="flex flex-col gap-4">
             {albums.map((album, i) => (
               <Reveal key={album.title} delay={0.16 + i * 0.08}>
-                <button
-                  onClick={() => selectTrack(album.trackIndex)}
+                <Link
+                  href={`/music/${album.slug}`}
                   className="group w-full text-left rounded-[1.5rem] border border-black/10 bg-surface p-4 shadow-sm hover:border-brandPurple/25 hover:shadow-md transition-all duration-200 flex items-center gap-4"
                 >
                   {/* Thumbnail */}
@@ -181,8 +184,7 @@ export default function MusicSection({
                       {album.description}
                     </p>
                   </div>
-
-                </button>
+                </Link>
               </Reveal>
             ))}
 

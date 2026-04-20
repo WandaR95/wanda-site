@@ -8,6 +8,7 @@ import {
   resolvePurchase,
 } from "@/lib/music-catalog"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
+import Link from "next/link"
 
 function formatPrice(cents) {
   return `$${(cents / 100).toFixed(2)}`
@@ -162,7 +163,9 @@ export default function MusicStorePage() {
                   <div>
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <div>
+                        <Link href={`/music/${album.slug}`} className="hover:text-brandPurple transition-colors">
                         <h2 className="text-3xl font-semibold">{album.title}</h2>
+                      </Link>
                         <p className="mt-2 text-muted">
                           Full album download: {formatPrice(album.priceCents)}
                         </p>
