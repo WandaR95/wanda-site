@@ -42,7 +42,7 @@ export default function MusicStorePage() {
       }
 
       audioRef.current.src = track.previewSrc
-      audioRef.current.currentTime = 0
+      audioRef.current.currentTime = track.previewStart ?? 0
       await audioRef.current.play()
       setPlayingSlug(track.slug)
 
