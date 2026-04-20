@@ -270,6 +270,17 @@ export default function AlbumPage() {
           </aside>
 
         </div>
+
+        {/* Discography link */}
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/music"
+            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-lavenderTint/60 px-6 py-3.5 text-sm font-medium text-brandPurple hover:bg-lavenderTint transition-colors duration-200"
+          >
+            Browse the full discography →
+          </Link>
+        </div>
+
       </section>
 
       <ScrollToTopButton />
