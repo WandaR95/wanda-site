@@ -7,6 +7,7 @@ import {
   TRACK_PRICE_CENTS,
   resolvePurchase,
 } from "@/lib/music-catalog"
+import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 function formatPrice(cents) {
   return `$${(cents / 100).toFixed(2)}`
@@ -285,6 +286,7 @@ export default function MusicStorePage() {
           </aside>
         </div>
       </section>
+      <ScrollToTopButton />
     </main>
   )
 }
