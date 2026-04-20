@@ -7,7 +7,7 @@ const pillars = [
   {
     tint: "bg-lavenderTint",
     label: "Capoeira",
-    body: "I've been training Capoeira for over a decade. It's a martial art where you learn to read people, adapt mid-movement, and find power in flow. It taught me that creativity isn't about force. It's about timing, presence, and trusting your body to know before your brain catches up.",
+    body: "I've been training Capoeira for almost two decades. It's a martial art where you learn to read people, adapt mid-movement, and find power in flow. It taught me that creativity isn't about force. It's about timing, presence, and trusting your body to know before your brain catches up.",
   },
   {
     tint: "bg-blueTint",
@@ -17,12 +17,12 @@ const pillars = [
   {
     tint: "bg-peachTint",
     label: "Music",
-    body: "Music is where I process everything I can't put into regular words. It's a form of expression when my feelings need a voice and an outlet. Two albums. Dozens of tracks. All of it honest.",
+    body: "Music is where I process everything I can't put into regular words. It's a form of expression when my feelings need a voice and an outlet. I've made a lot of music over the years, lost tracks along the way, and have had to start the journey of catalog building all over again. Two albums out now. More on the way. All of it honest.",
   },
   {
     tint: "bg-lavenderTint",
-    label: "Memoir",
-    body: "My book The First to Make It This Far is the story of becoming someone no one in your family has been before. What it costs you, and what it gives you.",
+    label: "Books & Writing",
+    body: "I write about the things that don't get said enough. The First to Make It This Far is the story of becoming someone no one in your family has been before. What it costs you, and what it gives you. Why You're Creatively Blocked is a guide for anyone who has ever felt stuck, resistant, or disconnected from their own creativity. Both books come from the same place: a belief that the inner work is the real work.",
   },
 ]
 
@@ -74,14 +74,14 @@ export default function AboutSection({ revealUp }) {
               </div>
             </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-5 items-stretch">
+            <div className="space-y-5">
               {pillars.map((p, i) => (
-                <Reveal key={p.label} delay={0.06 * (i + 1)} className="h-full">
-                  <div className={`h-full flex flex-col rounded-[1.75rem] border border-black/10 ${p.tint} p-7`}>
+                <Reveal key={p.label} delay={0.06 * (i + 1)}>
+                  <div className={`rounded-[1.75rem] border border-black/10 ${p.tint} p-7`}>
                     <p className="text-[11px] tracking-[0.24em] uppercase text-ink/50 mb-3">
                       {p.label}
                     </p>
-                    <p className="text-muted leading-relaxed flex-1">{p.body}</p>
+                    <p className="text-muted leading-relaxed">{p.body}</p>
                   </div>
                 </Reveal>
               ))}
