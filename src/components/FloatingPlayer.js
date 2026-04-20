@@ -14,6 +14,8 @@ export default function FloatingPlayer({
 }) {
   if (!playerVisible || !currentTrack) return null
 
+  const albumCover = currentTrack.src.replace(/\/[^/]+\.mp3$/, "/cover.jpg")
+
   return (
     <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
       <div className="flex items-center gap-5 rounded-2xl border border-white/40 bg-white/45 backdrop-blur-xl px-5 py-4 shadow-[0_20px_60px_rgba(31,41,55,0.12)]">
@@ -21,8 +23,8 @@ export default function FloatingPlayer({
         {/* Album Art */}
         <div className="relative h-12 w-12 overflow-hidden rounded-lg">
           <Image
-            src="/music/some-experience-necessary/cover.jpg"
-            alt="Album cover"
+            src={albumCover}
+            alt={currentTrack.album}
             fill
             className="object-cover"
           />
