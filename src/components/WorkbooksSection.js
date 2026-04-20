@@ -67,7 +67,7 @@ export default function WorkbooksSection({ revealUp }) {
           <SectionIntro
             eyebrow="Workbooks"
             title="Go deeper on your own terms."
-            body="Each workbook targets a specific creative block. Download, work through it, keep it. $27 each, or get all five plus the full Companion guide and save."
+            body="Each workbook targets a specific creative block. Download the PDF, work through it, keep it. $17 each, or get all five plus the full Companion guide for $67."
           />
         </Reveal>
 
@@ -92,7 +92,7 @@ export default function WorkbooksSection({ revealUp }) {
                 </p>
 
                 <div className="mt-6 flex items-center justify-between">
-                  <span className="text-2xl font-semibold text-ink">$27</span>
+                  <span className="text-2xl font-semibold text-ink">$17</span>
                   <a
                     href={wb.href}
                     className="rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
@@ -137,9 +137,9 @@ export default function WorkbooksSection({ revealUp }) {
 
               <div className="flex flex-col items-center lg:items-end gap-4 shrink-0">
                 <div className="text-center lg:text-right">
-                  <p className="text-4xl font-semibold text-ink">$97</p>
+                  <p className="text-4xl font-semibold text-ink">$67</p>
                   <p className="text-sm text-muted mt-1">
-                    vs. $135 individually
+                    vs. $85 individually
                   </p>
                 </div>
                 <a

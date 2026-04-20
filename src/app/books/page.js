@@ -52,10 +52,13 @@ export default function BooksPage() {
                 />
               </div>
 
-              {/* Format badge */}
-              <p className="text-[10px] tracking-[0.28em] uppercase text-ink/40 font-medium">
-                {book.format}
-              </p>
+              {/* Format + price */}
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] tracking-[0.28em] uppercase text-ink/40 font-medium">
+                  {book.format}
+                </p>
+                <p className="text-sm font-semibold text-ink">{book.price}</p>
+              </div>
 
               {/* Title */}
               <h2 className="mt-2 text-2xl font-semibold leading-snug">

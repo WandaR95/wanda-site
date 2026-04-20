@@ -3,6 +3,7 @@ export const BOOKS = [
     slug: "why-youre-creatively-blocked",
     title: "Why You're Creatively Blocked",
     format: "Paperback",
+    price: "$30.86",
     image: "/books/creatively-blocked.jpg",
     link: "https://www.lulu.com/shop/wanda-rogers/why-youre-creatively-blocked/paperback/product-kvddgn4.html?page=1&pageSize=4",
     description: "A guide for creatives navigating resistance, rebuilding momentum, and learning how to work with their creativity instead of against it.",
@@ -14,6 +15,7 @@ export const BOOKS = [
     slug: "the-first-to-make-it-this-far",
     title: "The First to Make It This Far",
     format: "Paperback",
+    price: "$29.09",
     image: "/books/first-to-make-it.jpg",
     link: "https://www.lulu.com/shop/wanda-rogers/the-first-to-make-it-this-far/paperback/product-yvkv7yd.html?page=1&pageSize=4",
     description: "A story about resilience, identity, and making it through what was supposed to break you.",
@@ -24,9 +26,7 @@ export const BOOKS = [
 ]
 
 // fileSlug maps to storage/workbooks/{fileSlug}.pdf
-// digitalPriceCents: price charged on site for instant PDF download
-// printHref: Lulu hardcopy link (add once Lulu listing is live)
-// printPrice: suggested Lulu retail price (set this in your Lulu dashboard)
+// All workbooks are digital ebook (PDF) only — no print option
 export const WORKBOOKS = [
   {
     slug: "overthinking-workbook",
@@ -36,10 +36,8 @@ export const WORKBOOKS = [
     tint: "bg-lavenderTint",
     accentText: "text-brandPurple",
     cover: "/workbooks/covers/overthinker.jpg",
-    digitalPriceCents: 2700,
-    digitalPrice: "$27",
-    printPrice: "$34",
-    printHref: "#",
+    digitalPriceCents: 1700,
+    digitalPrice: "$17",
     description: "Stop analyzing and start making. A guided process for breaking the loop, moving through paralysis, and building the muscle of decisive action.",
   },
   {
@@ -50,10 +48,8 @@ export const WORKBOOKS = [
     tint: "bg-blueTint",
     accentText: "text-brandBlue",
     cover: "/workbooks/covers/perfectionist.jpg",
-    digitalPriceCents: 2700,
-    digitalPrice: "$27",
-    printPrice: "$34",
-    printHref: "#",
+    digitalPriceCents: 1700,
+    digitalPrice: "$17",
     description: "Let go of the standard that's keeping you stuck. Exercises for building \"good enough\" momentum. Finished beats flawless.",
   },
   {
@@ -64,10 +60,8 @@ export const WORKBOOKS = [
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
     cover: "/workbooks/covers/distracted.jpg",
-    digitalPriceCents: 2700,
-    digitalPrice: "$27",
-    printPrice: "$34",
-    printHref: "#",
+    digitalPriceCents: 1700,
+    digitalPrice: "$17",
     description: "For creatives who can't stay in the chair. Practical systems for the distracted maker: boundary-setting, time-blocking, and reclaiming your own creative hours.",
   },
   {
@@ -78,10 +72,8 @@ export const WORKBOOKS = [
     tint: "bg-lavenderTint",
     accentText: "text-brandPurple",
     cover: "/workbooks/covers/idea-hopper.jpg",
-    digitalPriceCents: 2700,
-    digitalPrice: "$27",
-    printPrice: "$34",
-    printHref: "#",
+    digitalPriceCents: 1700,
+    digitalPrice: "$17",
     description: "Finish what you started. A structured excavation of your abandoned projects: finding out which ones still matter and building the commitment to see them through.",
   },
   {
@@ -92,10 +84,8 @@ export const WORKBOOKS = [
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
     cover: "/workbooks/covers/burnout.jpg",
-    digitalPriceCents: 2700,
-    digitalPrice: "$27",
-    printPrice: "$34",
-    printHref: "#",
+    digitalPriceCents: 1700,
+    digitalPrice: "$17",
     description: "Reignite slowly, sustainably. Rest is part of the process, not a detour from it. A step-by-step guide to rebuilding creative energy from the ground up.",
   },
 ]
@@ -104,11 +94,9 @@ export const COMPANION = {
   fileSlug: "comprehensive",
   title: "The Creative Clarity Companion",
   cover: "/workbooks/covers/comprehensive.jpg",
-  digitalPriceCents: 9700,
-  digitalPrice: "$97",
-  originalPrice: "$135",
-  printPrice: "$54",
-  printHref: "#",
+  digitalPriceCents: 6700,
+  digitalPrice: "$67",
+  originalPrice: "$85",
   description: "All 5 workbooks plus a complete 12-week guided program, structured by archetype, paced for real life. One price. One process.",
   tags: ["All 5 workbooks included", "12-week guided program", "Archetype-specific path"],
 }

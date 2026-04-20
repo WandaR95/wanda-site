@@ -91,40 +91,18 @@ export default function WorkbooksPage() {
                     <p className="mt-2 text-muted text-sm leading-relaxed flex-1">{wb.description}</p>
 
                     {/* Pricing row */}
-                    <div className="mt-5 pt-4 border-t border-black/08 space-y-3">
-                      {/* Digital */}
-                      <div className="flex items-center justify-between gap-3">
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.18em] text-ink/40 mb-0.5">Digital PDF</p>
-                          <p className="text-xl font-semibold">{wb.digitalPrice}</p>
-                        </div>
-                        <button
-                          onClick={() => toggle(wb.slug)}
-                          className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                            inCart(wb.slug)
-                              ? "bg-brandPurple text-white"
-                              : "border border-brandPurple text-brandPurple hover:bg-brandPurple hover:text-white"
-                          }`}
-                        >
-                          {inCart(wb.slug) ? "✓ Added" : "Add to Cart"}
-                        </button>
-                      </div>
-
-                      {/* Print */}
-                      <div className="flex items-center justify-between gap-3">
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.18em] text-ink/40 mb-0.5">Print Copy</p>
-                          <p className="text-sm font-medium text-ink">{wb.printPrice} via Lulu</p>
-                        </div>
-                        <a
-                          href={wb.printHref}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="rounded-full border border-black/15 px-4 py-2 text-sm font-medium text-muted hover:border-ink/30 hover:text-ink transition"
-                        >
-                          Buy Print
-                        </a>
-                      </div>
+                    <div className="mt-5 pt-4 border-t border-black/10 flex items-center justify-between gap-3">
+                      <p className="text-2xl font-semibold">{wb.digitalPrice}</p>
+                      <button
+                        onClick={() => toggle(wb.slug)}
+                        className={`rounded-full px-4 py-2.5 text-sm font-semibold transition ${
+                          inCart(wb.slug)
+                            ? "bg-brandPurple text-white"
+                            : "border border-brandPurple text-brandPurple hover:bg-brandPurple hover:text-white"
+                        }`}
+                      >
+                        {inCart(wb.slug) ? "✓ Added" : "Add to Cart"}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -156,43 +134,21 @@ export default function WorkbooksPage() {
                     })}
                   </div>
 
-                  <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                    {/* Digital */}
-                    <div className="flex items-center justify-between gap-3 rounded-2xl border border-black/10 bg-[#FCFAF7] p-4">
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.18em] text-ink/40 mb-0.5">Digital PDF</p>
-                        <div className="flex items-baseline gap-2">
-                          <p className="text-2xl font-semibold">{COMPANION.digitalPrice}</p>
-                          <p className="text-xs text-muted line-through">{COMPANION.originalPrice}</p>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toggle("companion")}
-                        className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                          inCart("companion")
-                            ? "bg-brandPurple text-white"
-                            : "border border-brandPurple text-brandPurple hover:bg-brandPurple hover:text-white"
-                        }`}
-                      >
-                        {inCart("companion") ? "✓ Added" : "Add to Cart"}
-                      </button>
+                  <div className="mt-6 flex items-center gap-4">
+                    <div className="flex items-baseline gap-2">
+                      <p className="text-3xl font-semibold">{COMPANION.digitalPrice}</p>
+                      <p className="text-sm text-muted line-through">{COMPANION.originalPrice}</p>
                     </div>
-
-                    {/* Print */}
-                    <div className="flex items-center justify-between gap-3 rounded-2xl border border-black/10 bg-[#FCFAF7] p-4">
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.18em] text-ink/40 mb-0.5">Print Copy</p>
-                        <p className="text-xl font-semibold">{COMPANION.printPrice} <span className="text-xs font-normal text-muted">via Lulu</span></p>
-                      </div>
-                      <a
-                        href={COMPANION.printHref}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="rounded-full border border-black/15 px-4 py-2 text-sm font-medium text-muted hover:border-ink/30 hover:text-ink transition"
-                      >
-                        Buy Print
-                      </a>
-                    </div>
+                    <button
+                      onClick={() => toggle("companion")}
+                      className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
+                        inCart("companion")
+                          ? "bg-brandPurple text-white"
+                          : "border border-brandPurple text-brandPurple hover:bg-brandPurple hover:text-white"
+                      }`}
+                    >
+                      {inCart("companion") ? "✓ Added" : "Add to Cart"}
+                    </button>
                   </div>
                 </div>
               </div>
