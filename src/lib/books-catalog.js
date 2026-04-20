@@ -23,64 +23,96 @@ export const BOOKS = [
   },
 ]
 
+// fileSlug maps to storage/workbooks/{fileSlug}.pdf
+// digitalPriceCents: price charged on site for instant PDF download
+// printHref: Lulu hardcopy link (add once Lulu listing is live)
+// printPrice: suggested Lulu retail price (set this in your Lulu dashboard)
 export const WORKBOOKS = [
   {
     slug: "overthinking-workbook",
+    fileSlug: "overthinker",
     title: "The Overthinking Workbook",
     archetype: "Overthinker",
     tint: "bg-lavenderTint",
     accentText: "text-brandPurple",
-    price: "$27",
-    href: "#",
+    cover: "/workbooks/covers/overthinker.jpg",
+    digitalPriceCents: 2700,
+    digitalPrice: "$27",
+    printPrice: "$34",
+    printHref: "#",
     description: "Stop analyzing and start making. A guided process for breaking the loop, moving through paralysis, and building the muscle of decisive action.",
   },
   {
     slug: "perfectionists-permission-slip",
+    fileSlug: "perfectionist",
     title: "The Perfectionist's Permission Slip",
     archetype: "Perfectionist",
     tint: "bg-blueTint",
     accentText: "text-brandBlue",
-    price: "$27",
-    href: "#",
+    cover: "/workbooks/covers/perfectionist.jpg",
+    digitalPriceCents: 2700,
+    digitalPrice: "$27",
+    printPrice: "$34",
+    printHref: "#",
     description: "Let go of the standard that's keeping you stuck. Exercises for building \"good enough\" momentum. Finished beats flawless.",
   },
   {
     slug: "focus-fix",
+    fileSlug: "distracted",
     title: "The Focus Fix",
     archetype: "Distracted",
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
-    price: "$27",
-    href: "#",
+    cover: "/workbooks/covers/distracted.jpg",
+    digitalPriceCents: 2700,
+    digitalPrice: "$27",
+    printPrice: "$34",
+    printHref: "#",
     description: "For creatives who can't stay in the chair. Practical systems for the distracted maker: boundary-setting, time-blocking, and reclaiming your own creative hours.",
   },
   {
     slug: "idea-graveyard",
+    fileSlug: "idea-hopper",
     title: "The Idea Graveyard",
     archetype: "Idea Hopper",
     tint: "bg-lavenderTint",
     accentText: "text-brandPurple",
-    price: "$27",
-    href: "#",
+    cover: "/workbooks/covers/idea-hopper.jpg",
+    digitalPriceCents: 2700,
+    digitalPrice: "$27",
+    printPrice: "$34",
+    printHref: "#",
     description: "Finish what you started. A structured excavation of your abandoned projects: finding out which ones still matter and building the commitment to see them through.",
   },
   {
     slug: "burnout-recovery-guide",
+    fileSlug: "burnout",
     title: "The Burnout Recovery Guide",
     archetype: "Burnout",
     tint: "bg-peachTint",
     accentText: "text-brandOrange",
-    price: "$27",
-    href: "#",
+    cover: "/workbooks/covers/burnout.jpg",
+    digitalPriceCents: 2700,
+    digitalPrice: "$27",
+    printPrice: "$34",
+    printHref: "#",
     description: "Reignite slowly, sustainably. Rest is part of the process, not a detour from it. A step-by-step guide to rebuilding creative energy from the ground up.",
   },
 ]
 
 export const COMPANION = {
+  fileSlug: "comprehensive",
   title: "The Creative Clarity Companion",
-  price: "$97",
+  cover: "/workbooks/covers/comprehensive.jpg",
+  digitalPriceCents: 9700,
+  digitalPrice: "$97",
   originalPrice: "$135",
-  href: "#",
+  printPrice: "$54",
+  printHref: "#",
   description: "All 5 workbooks plus a complete 12-week guided program, structured by archetype, paced for real life. One price. One process.",
   tags: ["All 5 workbooks included", "12-week guided program", "Archetype-specific path"],
+}
+
+export function getWorkbookBySlug(slug) {
+  return WORKBOOKS.find((wb) => wb.slug === slug)
 }
