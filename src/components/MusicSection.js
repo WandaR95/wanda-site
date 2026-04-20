@@ -28,6 +28,7 @@ export default function MusicSection({
   currentTrackIndex,
   isPlaying,
   playTrack,
+  selectTrack,
 }) {
   const moods = [
     { emoji: "🌌", label: "Reflective", trackIndex: 0, tint: "bg-lavenderTint", activeBorder: "border-brandPurple/40" },
@@ -75,7 +76,7 @@ export default function MusicSection({
               return (
                 <button
                   key={mood.label}
-                  onClick={() => playTrack(mood.trackIndex)}
+                  onClick={() => selectTrack(mood.trackIndex)}
                   className={`flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-200
                     ${active
                       ? `${mood.tint} ${mood.activeBorder} text-ink shadow-sm scale-[1.02]`
@@ -164,7 +165,7 @@ export default function MusicSection({
             {albums.map((album, i) => (
               <Reveal key={album.title} delay={0.16 + i * 0.08}>
                 <button
-                  onClick={() => playTrack(album.trackIndex)}
+                  onClick={() => selectTrack(album.trackIndex)}
                   className="group w-full text-left rounded-[1.5rem] border border-black/10 bg-surface p-4 shadow-sm hover:border-brandPurple/25 hover:shadow-md transition-all duration-200 flex items-center gap-4"
                 >
                   {/* Thumbnail */}

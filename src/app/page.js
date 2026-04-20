@@ -391,6 +391,7 @@ export default function Home() {
         currentTrackIndex={currentTrackIndex}
         isPlaying={isPlaying}
         playTrack={playTrack}
+        selectTrack={setCurrentTrackIndex}
       />
 
       <ThisIsForYouSection />
