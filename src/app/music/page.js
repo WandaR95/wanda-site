@@ -115,6 +115,15 @@ export default function MusicStorePage() {
       <audio ref={audioRef} hidden />
 
       <section className="max-w-7xl mx-auto">
+        <div className="mb-6">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200"
+          >
+            ← Back to wandarogers.com
+          </a>
+        </div>
+
         <div className="rounded-[2rem] border border-black/10 bg-surface p-8 md:p-12 shadow-xl">
           <p className="text-[11px] tracking-[0.32em] uppercase text-ink/50">
             Wanda Rogers Music Store
