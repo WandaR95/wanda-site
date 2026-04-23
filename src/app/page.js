@@ -376,6 +376,7 @@ export default function Home() {
 
   return (
     <main className="pt-8 relative min-h-screen bg-cream text-ink pb-32 overflow-hidden">
+      <audio ref={audioRef} hidden />
       <AmbientBackground />
       <ScrollProgressBar />
       <div className="relative z-10" />
@@ -391,6 +392,7 @@ export default function Home() {
         currentTrackIndex={currentTrackIndex}
         isPlaying={isPlaying}
         playTrack={playTrack}
+        selectTrack={setCurrentTrackIndex}
       />
 
       <ThisIsForYouSection />
