@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function Navbar({ calendlyLink }) {
   const links = [
     { label: "Music", href: "#music" },
@@ -16,8 +18,15 @@ export default function Navbar({ calendlyLink }) {
           {/* Logo */}
           <a
             href="#top"
-            className="text-lg font-semibold tracking-tight text-ink"
+            className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-ink hover:opacity-80 transition"
           >
+            <Image
+              src="/logo-icon.png"
+              alt="Mellow Mastermind"
+              width={32}
+              height={32}
+              className="rounded-md"
+            />
             Wanda Rogers
           </a>
 
