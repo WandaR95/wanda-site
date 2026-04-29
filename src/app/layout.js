@@ -1,12 +1,36 @@
 import "./globals.css"
 
+const META_TITLE = "Wanda Rogers | Artist, Author, Founder of Mellow Mastermind"
+const META_DESCRIPTION =
+  "Wanda Rogers is an artist, author, and founder of Mellow Mastermind, a creative framework for clarity, self-trust, and sustainable expression. She helps creatives break through overthinking, build clarity, and create with more consistency through books, music, and transformational tools."
+
 export const metadata = {
-  title: "Wanda Rogers | Artist, Author, Founder of Mellow Mastermind",
-  description:
-    "Wanda Rogers is an artist, author, and founder of Mellow Mastermind, a creative framework for clarity, self-trust, and sustainable expression. She helps creatives break through overthinking, build clarity, and create with more consistency through books, music, and transformational tools.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   icons: {
     icon: "/logo-icon.png",
     apple: "/logo-icon.png",
+  },
+  openGraph: {
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+    url: "https://www.wandarogers.com",
+    siteName: "Wanda Rogers",
+    images: [
+      {
+        url: "/wanda-hero.jpg",
+        width: 900,
+        height: 1100,
+        alt: "Wanda Rogers — Artist, Author, Founder of Mellow Mastermind",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+    images: ["/wanda-hero.jpg"],
   },
 }
 
