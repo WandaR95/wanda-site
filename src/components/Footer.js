@@ -67,7 +67,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://discord.gg/wandarogers"
+                href="https://discord.gg/c37KhByYUb"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-ink"
