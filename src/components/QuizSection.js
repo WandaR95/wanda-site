@@ -13,6 +13,7 @@ const ARCHETYPES = {
     description:
       "You can see every angle of a project before you start, which means you rarely start. The creative block isn't a lack of ideas. It's a traffic jam of too many. You need less information and more permission to move before you're ready.",
     resource: "The Overthinking Workbook",
+    workbookHref: "/workbooks",
   },
   Perfectionist: {
     emoji: "🎯",
@@ -22,6 +23,7 @@ const ARCHETYPES = {
     description:
       "The work never feels ready because you're holding it up against a version that doesn't exist yet. The real block is the gap between your vision and your willingness to let the process be messy. Progress requires releasing the final version from your imagination.",
     resource: "The Perfectionist's Permission Slip",
+    workbookHref: "/workbooks",
   },
   Distracted: {
     emoji: "🌊",
@@ -31,6 +33,7 @@ const ARCHETYPES = {
     description:
       "Life keeps interrupting your creative time, and you've started to wonder if that's on purpose. The block isn't focus. It's boundaries: permission to prioritize your own work without explaining yourself to anyone.",
     resource: "The Focus Fix",
+    workbookHref: "/workbooks",
   },
   "Idea Hopper": {
     emoji: "⚡",
@@ -40,6 +43,7 @@ const ARCHETYPES = {
     description:
       "You have more ideas than most people have in a lifetime. The block is commitment: staying long enough to finish something, even when something new and shiny is already calling. Your greatest asset becomes your biggest saboteur.",
     resource: "The Idea Graveyard",
+    workbookHref: "/workbooks",
   },
   Burnout: {
     emoji: "🌱",
@@ -49,6 +53,7 @@ const ARCHETYPES = {
     description:
       "Now even thinking about creating feels like lifting something too heavy. This isn't laziness. It's depletion. It requires a different kind of work than pushing harder. Recovery is not a detour from creativity. It is the work.",
     resource: "The Burnout Recovery Guide",
+    workbookHref: "/workbooks",
   },
 }
 
@@ -364,11 +369,18 @@ export default function QuizSection({ revealUp }) {
                 ) : (
                   <div className="rounded-[1.5rem] bg-lavenderTint border border-brandPurple/20 p-6 text-center">
                     <p className="text-2xl mb-2">✅</p>
-                    <p className="font-semibold text-ink">You're in, {firstName}.</p>
+                    <p className="font-semibold text-ink">You&apos;re in, {firstName}.</p>
                     <p className="mt-2 text-sm text-muted leading-relaxed">
-                      Check your inbox for your personalized {archetype} guide. While you wait,
-                      keep scrolling to find the workbook built for you.
+                      Check your inbox for your personalized {archetype} guide.
                     </p>
+                    {info?.workbookHref && (
+                      <a
+                        href={info.workbookHref}
+                        className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
+                      >
+                        Get {info.resource} →
+                      </a>
+                    )}
                   </div>
                 )}
 
