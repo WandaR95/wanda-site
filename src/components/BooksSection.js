@@ -59,7 +59,20 @@ export default function BooksSection({ revealUp, featuredBooks }) {
                   {book.description}
                 </p>
 
-                <div className="mt-7 inline-flex rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold">
+                {book.themes && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {book.themes.map((theme) => (
+                      <span
+                        key={theme}
+                        className="rounded-full bg-lavenderTint px-3 py-1 text-xs text-ink/60"
+                      >
+                        {theme}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mt-6 inline-flex rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold">
                   {book.cta}
                 </div>
               </a>

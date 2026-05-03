@@ -1,9 +1,14 @@
+import Image from "next/image"
+
 export default function Footer() {
   return (
     <footer className="border-t border-black/10 bg-[#F2ECE4]">
       <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-muted">
         <div>
-          <h3 className="text-ink font-semibold mb-3">Wanda Rogers</h3>
+          <div className="flex items-center gap-2 mb-3">
+            <Image src="/logo-icon.png" alt="Mellow Mastermind" width={28} height={28} className="rounded-sm" />
+            <h3 className="text-ink font-semibold">Wanda Rogers</h3>
+          </div>
           <p className="leading-relaxed">
             Wanda Rogers is an artist, author, and founder of Mellow Mastermind,
             a creative framework designed to help people reconnect with their
@@ -62,7 +67,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://discord.gg/wandarogers"
+                href="https://discord.gg/c37KhByYUb"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-ink"

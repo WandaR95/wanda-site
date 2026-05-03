@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import Reveal from "./Reveal"
 
@@ -18,11 +19,15 @@ export default function MellowMastermindSection({ revealUp }) {
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
             <Reveal delay={0.04}>
               <div>
-                <p className="text-[11px] tracking-[0.28em] uppercase text-ink/50">
-                  Mellow Mastermind
-                </p>
+                <Image
+                  src="/logo-full.png"
+                  alt="Mellow Mastermind"
+                  width={220}
+                  height={110}
+                  className="object-contain mb-6"
+                />
 
-                <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
+                <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-ink">
                   A framework for creatives learning to trust themselves again.
                 </h2>
 
