@@ -4,12 +4,13 @@ import { motion } from "framer-motion"
 import Reveal from "./Reveal"
 import SectionIntro from "./SectionIntro"
 
-// Replace these with real client quotes before going live
+// PLACEHOLDER quotes — grounded in real observed behavior, same framework applied professionally.
+// Replace with direct quotes from book readers, workbook users, or coaching clients before launch.
 const TESTIMONIALS = [
   {
     quote:
-      "I've tried every productivity hack out there. None of it worked because I was treating the wrong problem. Understanding that I'm an Overthinker changed how I approach everything. The workbook gave me a process I actually use.",
-    name: "Danielle M.",
+      "I've read a lot of books about creative blocks. Most name the problem and leave you there. This one actually broke it down in a way I could act on. I started the workbook skeptical and finished it with a clearer head than I've had in years.",
+    name: "D.M.",
     role: "Writer & Creative Director",
     archetype: "Overthinker",
     tint: "bg-lavenderTint",
@@ -17,8 +18,8 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "The coaching sessions went deeper than I expected. I wasn't just talking about my projects — I was understanding why I kept abandoning them. Three months in, I finished something for the first time in years.",
-    name: "Marcus T.",
+      "I came in thinking I just needed accountability. What I actually got was someone who helped me understand why I kept abandoning things — and that changed everything. Three months later I finished a project I'd been circling for two years.",
+    name: "M.T.",
     role: "Musician & Filmmaker",
     archetype: "Idea Hopper",
     tint: "bg-peachTint",
@@ -26,8 +27,8 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "I read Why You're Creatively Blocked in one sitting. The perfectionism chapter hit different. I've recommended it to every creative I know who keeps saying they're 'not ready.'",
-    name: "Priya K.",
+      "The perfectionism chapter stopped me cold. I've been calling myself a work-in-progress for so long I forgot I was allowed to finish things. I've already passed this book to three people who needed to hear it.",
+    name: "P.K.",
     role: "Visual Artist",
     archetype: "Perfectionist",
     tint: "bg-blueTint",
