@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import Reveal from "./Reveal"
 import SectionIntro from "./SectionIntro"
@@ -93,12 +94,12 @@ export default function WorkbooksSection({ revealUp }) {
 
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-2xl font-semibold text-ink">$25</span>
-                  <a
-                    href={wb.href}
+                  <Link
+                    href="/workbooks"
                     className="rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
                   >
                     Get it →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Reveal>
@@ -142,12 +143,12 @@ export default function WorkbooksSection({ revealUp }) {
                     vs. $125 individually
                   </p>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  href="/workbooks"
                   className="rounded-full bg-brandPurple text-white px-8 py-3.5 text-sm font-semibold hover:opacity-90 transition whitespace-nowrap"
                 >
                   Get the Companion →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
