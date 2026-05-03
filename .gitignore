@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secure file storage — PDFs served via API, never committed
+/storage
+
+# Claude Code local settings
+.claude/
