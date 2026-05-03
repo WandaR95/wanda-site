@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import SectionIntro from "./SectionIntro"
 import Reveal from "./Reveal"
@@ -27,12 +28,7 @@ export default function BooksSection({ revealUp, featuredBooks }) {
         <div className="mt-12 grid md:grid-cols-2 gap-8 items-stretch">
           {featuredBooks.map((book, index) => (
             <Reveal key={book.title} delay={0.08 * (index + 1)} className="h-full">
-              <a
-                href={book.link}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex flex-col h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm"
-              >
+              <div className="group flex flex-col h-full rounded-[1.75rem] border border-black/10 bg-surface p-7 hover:border-brandBlue/25 transition shadow-sm">
                 <div className="relative w-full overflow-hidden shadow-xl" style={{ aspectRatio: "1024/1384" }}>
                   <Image
                     src={book.image}
@@ -46,9 +42,9 @@ export default function BooksSection({ revealUp, featuredBooks }) {
                   <span className="text-xs uppercase tracking-[0.2em] text-ink/40">
                     {book.format}
                   </span>
-                  <span className="text-sm text-brandBlue group-hover:opacity-80 transition">
+                  <Link href="/books" className="text-sm text-brandBlue hover:opacity-80 transition">
                     View →
-                  </span>
+                  </Link>
                 </div>
 
                 <h3 className="mt-4 text-2xl font-semibold leading-snug text-ink">
@@ -72,10 +68,15 @@ export default function BooksSection({ revealUp, featuredBooks }) {
                   </div>
                 )}
 
-                <div className="mt-6 inline-flex rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold">
+                <a
+                  href={book.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex rounded-full bg-brandPurple text-white px-5 py-2.5 text-sm font-semibold hover:opacity-90 transition"
+                >
                   {book.cta}
-                </div>
-              </a>
+                </a>
+              </div>
             </Reveal>
           ))}
         </div>
