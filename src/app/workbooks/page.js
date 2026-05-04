@@ -1,14 +1,32 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { WORKBOOKS, COMPANION } from "@/lib/books-catalog"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 
+const CART_KEY = "workbook-cart"
+
 export default function WorkbooksPage() {
   const [cart, setCart] = useState([])
   const [loadingCheckout, setLoadingCheckout] = useState(false)
+
+  // Restore cart from localStorage on mount, reset any stuck loading state
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(CART_KEY)
+      if (saved) setCart(JSON.parse(saved))
+    } catch {}
+    setLoadingCheckout(false)
+  }, [])
+
+  // Persist cart to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart))
+    } catch {}
+  }, [cart])
 
   const toggle = (slug) =>
     setCart((prev) =>
@@ -34,6 +52,8 @@ export default function WorkbooksPage() {
       })
       const data = await res.json()
       if (!res.ok) { alert(data.error || "Unable to start checkout."); setLoadingCheckout(false); return }
+      // Clear cart after successful redirect to Stripe
+      localStorage.removeItem(CART_KEY)
       window.location.href = data.url
     } catch {
       alert("Something went wrong.")
