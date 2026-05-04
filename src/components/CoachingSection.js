@@ -20,7 +20,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
             {/* Urgency badge */}
             <div className="flex justify-center mb-8">
               <span className="inline-flex items-center gap-2 rounded-full bg-peachTint border border-brandOrange/20 px-5 py-2 text-sm font-medium text-brandOrange">
-                ⚡ Founding rate · $997 · Only 5 spots total
+                ⚡ Founding rate · $997
               </span>
             </div>
 
@@ -30,8 +30,8 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
               </p>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-ink">
-                Founding Client Rate:
-                <span className="block text-brandPurple mt-1">5 Spots Only</span>
+                Creative Clarity
+                <span className="block text-brandPurple mt-1">1:1 Coaching</span>
               </h2>
 
               <p className="mt-3 text-xl font-medium text-muted">

@@ -11,7 +11,6 @@ import WorkbooksSection from "@/components/WorkbooksSection"
 import MellowMastermindSection from "@/components/MellowMastermindSection"
 import CoachingSection from "@/components/CoachingSection"
 import TestimonialsSection from "@/components/TestimonialsSection"
-import WhatThisWorkHoldsSection from "@/components/WhatThisWorkHoldsSection"
 import Footer from "@/components/Footer"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 import AmbientBackground from "@/components/AmbientBackground"
@@ -75,7 +74,6 @@ export default function Home() {
       <MellowMastermindSection revealUp={revealUp} />
       <TestimonialsSection />
       <CoachingSection revealUp={revealUp} calendlyLink={calendlyLink} />
-      <WhatThisWorkHoldsSection revealUp={revealUp} />
       <Footer />
 
       <ScrollToTopButton />

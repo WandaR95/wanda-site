@@ -11,6 +11,9 @@ export const metadata = {
     icon: "/logo-icon.png",
     apple: "/logo-icon.png",
   },
+  alternates: {
+    canonical: "https://www.wandarogers.com",
+  },
   openGraph: {
     title: META_TITLE,
     description: META_DESCRIPTION,

@@ -24,14 +24,14 @@ export default function LeadMagnetSection({ revealUp }) {
                 </p>
 
                 <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-ink">
-                  The 15-Minute Creative Reset
+                  The Creative Clarity Guide
                 </h2>
 
                 <p className="mt-6 text-lg leading-relaxed text-muted max-w-2xl">
-                  Stop overthinking. Start creating. This science-backed reset is
-                  designed to help you break through creative blocks, rebuild
-                  momentum, and move with more clarity in less time than it takes
-                  to scroll.
+                  Stop overthinking. Start creating. This free guide gives you a
+                  15-minute reset designed to help you break through creative
+                  blocks, rebuild momentum, and move with more clarity in less
+                  time than it takes to scroll.
                 </p>
 
                 <p className="mt-5 text-lg leading-relaxed text-muted max-w-2xl">
@@ -57,7 +57,7 @@ export default function LeadMagnetSection({ revealUp }) {
             <Reveal delay={0.12}>
               <div className="rounded-[1.5rem] border border-black/10 bg-[#FCFAF7] p-6 md:p-7">
                 <h3 className="text-2xl font-semibold text-ink">
-                  Get unstuck in 15 minutes
+                  Get the Creative Clarity Guide — free
                 </h3>
 
                 <p className="mt-3 text-muted leading-relaxed">
