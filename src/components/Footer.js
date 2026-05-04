@@ -20,10 +20,12 @@ export default function Footer() {
         <div>
           <h4 className="text-ink font-semibold mb-3">Explore</h4>
           <ul className="space-y-2">
-            <li><a href="#music" className="hover:text-ink">Music</a></li>
+            <li><a href="#lead-magnet" className="hover:text-ink">Creative Clarity Guide</a></li>
+            <li><a href="#workbooks" className="hover:text-ink">Workbooks</a></li>
             <li><a href="#books" className="hover:text-ink">Books</a></li>
+            <li><a href="#coaching" className="hover:text-ink">Coaching</a></li>
             <li><a href="#mellow-mastermind" className="hover:text-ink">Mellow Mastermind</a></li>
-            <li><a href="#coaching" className="hover:text-ink">Support</a></li>
+            <li><a href="/music" className="hover:text-ink">Music</a></li>
           </ul>
         </div>
 
