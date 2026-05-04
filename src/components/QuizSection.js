@@ -223,7 +223,7 @@ export default function QuizSection({ revealUp }) {
               Five questions. Honest answers. A diagnosis that actually fits.
             </p>
             <p className="mt-4 text-sm text-ink/40">
-              Already know your type?{" "}
+              Already know what&apos;s blocking you?{" "}
               <a href="#workbooks" className="underline underline-offset-2 hover:text-ink transition">
                 Go straight to the workbooks →
               </a>
