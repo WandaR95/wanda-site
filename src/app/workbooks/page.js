@@ -7,24 +7,36 @@ import { WORKBOOKS, COMPANION } from "@/lib/books-catalog"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 const CART_KEY = "workbook-cart"
+const CART_TTL_MS = 15 * 60 * 1000 // 15 minutes
 
 export default function WorkbooksPage() {
   const [cart, setCart] = useState([])
   const [loadingCheckout, setLoadingCheckout] = useState(false)
 
-  // Restore cart from localStorage on mount, reset any stuck loading state
+  // Restore cart from localStorage on mount if within 15-minute window
   useEffect(() => {
     try {
       const saved = localStorage.getItem(CART_KEY)
-      if (saved) setCart(JSON.parse(saved))
+      if (saved) {
+        const { items, savedAt } = JSON.parse(saved)
+        if (Date.now() - savedAt < CART_TTL_MS) {
+          setCart(items)
+        } else {
+          localStorage.removeItem(CART_KEY)
+        }
+      }
     } catch {}
     setLoadingCheckout(false)
   }, [])
 
-  // Persist cart to localStorage whenever it changes
+  // Persist cart to localStorage with a fresh timestamp on every change
   useEffect(() => {
     try {
-      localStorage.setItem(CART_KEY, JSON.stringify(cart))
+      if (cart.length > 0) {
+        localStorage.setItem(CART_KEY, JSON.stringify({ items: cart, savedAt: Date.now() }))
+      } else {
+        localStorage.removeItem(CART_KEY)
+      }
     } catch {}
   }, [cart])
 
@@ -52,8 +64,6 @@ export default function WorkbooksPage() {
       })
       const data = await res.json()
       if (!res.ok) { alert(data.error || "Unable to start checkout."); setLoadingCheckout(false); return }
-      // Clear cart after successful redirect to Stripe
-      localStorage.removeItem(CART_KEY)
       window.location.href = data.url
     } catch {
       alert("Something went wrong.")
