@@ -11,6 +11,9 @@ export const metadata = {
     icon: "/logo-icon.png",
     apple: "/logo-icon.png",
   },
+  alternates: {
+    canonical: "https://www.wandarogers.com",
+  },
   openGraph: {
     title: META_TITLE,
     description: META_DESCRIPTION,
@@ -18,9 +21,9 @@ export const metadata = {
     siteName: "Wanda Rogers",
     images: [
       {
-        url: "/wanda-hero.jpg",
-        width: 900,
-        height: 1100,
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Wanda Rogers — Artist, Author, Founder of Mellow Mastermind",
       },
     ],
@@ -30,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: META_TITLE,
     description: META_DESCRIPTION,
-    images: ["/wanda-hero.jpg"],
+    images: ["/og-image.jpg"],
   },
 }
 

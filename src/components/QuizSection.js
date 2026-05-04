@@ -222,6 +222,12 @@ export default function QuizSection({ revealUp }) {
             <p className="mt-5 text-lg text-muted leading-relaxed max-w-xl mx-auto">
               Five questions. Honest answers. A diagnosis that actually fits.
             </p>
+            <p className="mt-4 text-sm text-ink/40">
+              Already know your type?{" "}
+              <a href="#workbooks" className="underline underline-offset-2 hover:text-ink transition">
+                Go straight to the workbooks →
+              </a>
+            </p>
           </div>
         </Reveal>
 

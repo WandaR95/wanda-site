@@ -47,7 +47,7 @@ export default function MellowMastermindSection({ revealUp }) {
                   href="#coaching"
                   className="inline-flex mt-8 rounded-full border border-brandPurple/25 px-6 py-3 text-sm font-semibold text-brandPurple hover:bg-lavenderTint transition"
                 >
-                  Explore the Support Path
+                  Explore 1:1 Coaching →
                 </a>
               </div>
             </Reveal>

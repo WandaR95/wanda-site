@@ -96,13 +96,11 @@ export default function Navbar({ calendlyLink }) {
                 </a>
               ))}
               <a
-                href={calendlyLink}
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:hello@wandarogers.com"
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 rounded-full bg-brandPurple text-white px-5 py-3 text-sm font-semibold hover:opacity-90 transition text-center"
               >
-                Book a Free Discovery Call →
+                Work With Me
               </a>
             </nav>
           </div>

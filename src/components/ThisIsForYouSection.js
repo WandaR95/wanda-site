@@ -37,6 +37,21 @@ export default function ThisIsForYouSection() {
                 </Reveal>
               ))}
             </div>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#lead-magnet"
+                className="rounded-full bg-brandPurple text-white px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+              >
+                Get the Free Guide →
+              </a>
+              <a
+                href="#quiz"
+                className="rounded-full border border-brandPurple/30 px-6 py-3 text-sm text-brandPurple hover:bg-lavenderTint transition"
+              >
+                Find Your Archetype
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>

@@ -26,6 +26,7 @@ export default function Footer() {
             <li><a href="#coaching" className="hover:text-ink">Coaching</a></li>
             <li><a href="#mellow-mastermind" className="hover:text-ink">Mellow Mastermind</a></li>
             <li><a href="/music" className="hover:text-ink">Music</a></li>
+            <li><a href="#about" className="hover:text-ink">About</a></li>
           </ul>
         </div>
 
