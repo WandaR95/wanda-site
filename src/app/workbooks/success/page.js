@@ -2,11 +2,18 @@
 
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
 
 function SuccessContent() {
   const params = useSearchParams()
   const sessionId = params.get("session_id")
+
+  // Clear the cart on successful purchase
+  useEffect(() => {
+    try {
+      localStorage.removeItem("workbook-cart")
+    } catch {}
+  }, [])
 
   return (
     <main className="min-h-screen bg-cream text-ink flex items-center justify-center px-6 py-20">

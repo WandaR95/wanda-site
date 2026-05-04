@@ -7,33 +7,25 @@ import { WORKBOOKS, COMPANION } from "@/lib/books-catalog"
 import ScrollToTopButton from "@/components/ScrollToTopButton"
 
 const CART_KEY = "workbook-cart"
-const CART_TTL_MS = 15 * 60 * 1000 // 15 minutes
 
 export default function WorkbooksPage() {
   const [cart, setCart] = useState([])
   const [loadingCheckout, setLoadingCheckout] = useState(false)
 
-  // Restore cart from localStorage on mount if within 15-minute window
+  // Restore cart from localStorage on mount
   useEffect(() => {
     try {
       const saved = localStorage.getItem(CART_KEY)
-      if (saved) {
-        const { items, savedAt } = JSON.parse(saved)
-        if (Date.now() - savedAt < CART_TTL_MS) {
-          setCart(items)
-        } else {
-          localStorage.removeItem(CART_KEY)
-        }
-      }
+      if (saved) setCart(JSON.parse(saved))
     } catch {}
     setLoadingCheckout(false)
   }, [])
 
-  // Persist cart to localStorage with a fresh timestamp on every change
+  // Persist cart to localStorage whenever it changes
   useEffect(() => {
     try {
       if (cart.length > 0) {
-        localStorage.setItem(CART_KEY, JSON.stringify({ items: cart, savedAt: Date.now() }))
+        localStorage.setItem(CART_KEY, JSON.stringify(cart))
       } else {
         localStorage.removeItem(CART_KEY)
       }

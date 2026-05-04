@@ -7,10 +7,12 @@ export default function Navbar({ calendlyLink }) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const links = [
-    { label: "Music", href: "#music" },
-    { label: "Books", href: "#books" },
     { label: "Creative Clarity Guide", href: "#lead-magnet" },
+    { label: "Workbooks", href: "#workbooks" },
+    { label: "Books", href: "#books" },
+    { label: "Coaching", href: "#coaching" },
     { label: "Mellow Mastermind", href: "#mellow-mastermind" },
+    { label: "Music", href: "/music" },
   ]
 
   return (
