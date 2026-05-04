@@ -38,32 +38,7 @@ export default function CoachingSection({ revealUp, calendlyLink }) {
                 $997 · 3 months · 6 sessions · bi-weekly · 60 min each
               </p>
 
-              {/* Spots counter — update SPOTS_CLAIMED as spots fill */}
-              {(() => {
-                const SPOTS_TOTAL = 5
-                const SPOTS_CLAIMED = 0
-                const SPOTS_LEFT = SPOTS_TOTAL - SPOTS_CLAIMED
-                const pct = Math.round((SPOTS_CLAIMED / SPOTS_TOTAL) * 100)
-                return (
-                  <div className="mt-6 max-w-xs mx-auto">
-                    <div className="flex justify-between text-xs text-ink/50 mb-1.5">
-                      <span>Founding spots remaining</span>
-                      <span className="font-semibold text-brandOrange">{SPOTS_LEFT} of {SPOTS_TOTAL}</span>
-                    </div>
-                    <div className="h-2 rounded-full bg-black/10 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-brandOrange transition-all duration-500"
-                        style={{ width: `${Math.max(pct, 4)}%` }}
-                      />
-                    </div>
-                    <p className="mt-1.5 text-xs text-ink/40">
-                      {SPOTS_LEFT === SPOTS_TOTAL
-                        ? "All spots still available at founding rate"
-                        : `${SPOTS_CLAIMED} spot${SPOTS_CLAIMED !== 1 ? "s" : ""} claimed — founding rate closes when the last one fills`}
-                    </p>
-                  </div>
-                )
-              })()}
+              <p className="mt-2 text-sm text-ink/50">Limited spots available at this rate.</p>
 
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
                 This is the founding client offer. You get full access to my creative

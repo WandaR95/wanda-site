@@ -53,12 +53,10 @@ export default function Navbar({ calendlyLink }) {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <a
-              href={calendlyLink}
-              target="_blank"
-              rel="noreferrer"
+              href="mailto:hello@wandarogers.com"
               className="rounded-full bg-brandPurple text-white px-5 py-2 text-sm font-semibold hover:opacity-90 transition"
             >
-              Support
+              Work With Me
             </a>
 
             {/* Hamburger — mobile only */}

@@ -42,10 +42,10 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#music"
+                href="/workbooks"
                 className="rounded-full border border-brandBlue/30 px-6 py-3 text-sm text-brandBlue hover:bg-blueTint transition"
               >
-                Listen to My Music
+                Find Your Fix
               </a>
 
               <a
